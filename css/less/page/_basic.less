@@ -1,0 +1,60 @@
+/*** FABIOZC ***/
+
+// Base URL, Reset, Grid, Core variables and mixins
+@import "../custom/_baseurl.less";
+@import "../custom/_reset.less";
+@import "../custom/_variables.less";
+@import "../custom/_mixins.less";
+@import "../custom/_font.less";
+@import "../custom/_common.less";
+
+/* Basic CSS */
+*,
+*:before,
+*:after{ box-sizing: border-box;}
+
+html{ overflow-x: hidden; font-size: @baseFontSize; line-height: @baseLineHeight; height: 100%;}
+body{ background-color: @bgcolor2; color: @textColor; .font-family; margin: 0;}
+body > section{ .clearfix;}
+
+a{ color: @linkColor; text-decoration: none; text-decoration: none;
+    &:hover{ color: @linkColorHover; .transition(all @anim linear);}
+}
+img{ text-decoration: none; }
+::selection{ background: @linkColor; color: @white; text-shadow: none;}
+
+@containerSize: @desktop - @space;
+.container{ .clearfix; margin: 0 auto; width: @containerSize; transform: translateZ(0); -webkit-transform: translateZ(0);
+    @media (max-width: @mobile){
+        @space: 15px;
+        &{ font-size: 16px; padding: @space; width: 100%; text-align: center;}
+    }
+}
+
+@introHeight: 480px;
+.main-section:not(.intro){ position: relative; background-color: @white; padding-bottom: @vSpace;}
+.main-section:nth-child(1){ position: fixed; top: 0; right: 0; left: 0; z-index: -1; height: @introHeight;}
+.main-section:nth-child(2){ margin-top: @introHeight; padding-top: @vSpace;}
+
+.section-title,
+.section-subtitle{ display: block; .sansLight; font-size: @largerFont; margin: 0 0 @vSpace/2;
+	@media (max-width: @mobile){ margin: 0 @vSpace/3 @vSpace/2;}
+}
+.section-subtitle{ font-size: @largeFont;}
+.text-title{ font-size: @smallFont; .sansLight; letter-spacing: 4px; margin: @vSpace 0 0 0; text-transform: uppercase;}
+.footer{ padding: @vSpace; text-align: center;
+    .btn-portfolio{ .btn-secondary; margin-right: @margin;}
+    .btn-contact{ .btn-primary; margin-left: @margin;}
+    @media (max-width: @mobile){ 
+    	&{ font-size: 16px; padding: @vSpace/2;}
+        .btn-portfolio,
+        .btn-contact{ display: block; margin: @margin/4 0;}
+    }
+}
+.copy{ background: @white; display: block; padding: @vSpace/2; text-align: center;
+	@media (max-width: @mobile){ font-size: 0.8rem;}
+}
+
+
+/* SNIPPETS ---------------------------- */
+@import "../snippet/buttons.less";

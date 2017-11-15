@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="793px" height="171px" viewBox="0 0 793 171" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="3.74939946e-31%" y1="100%" x2="100%" y2="1.11022302e-14%" id="linearGradient-1">
+            <stop stop-color="#00C9BE" offset="0%"></stop>
+            <stop stop-color="#29C963" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2-Copy-3" transform="translate(-241.000000, -298.000000)">
+            <g id="Group" transform="translate(241.000000, 299.000000)">
+                <text id="Entrepreneurial" opacity="0.899999976" font-family="SFUIDisplay-Bold, SF UI Display" font-size="100" font-weight="bold" line-spacing="76" letter-spacing="-2.27272654" fill="#4A4A4A">
+                    <tspan x="114" y="95">E</tspan>
+                    <tspan x="169.051492" y="95" letter-spacing="-0.77">nt</tspan>
+                    <tspan x="262.62868" y="95">repre</tspan>
+                    <tspan x="496.382235" y="95" letter-spacing="-2.97">n</tspan>
+                    <tspan x="552.347781" y="95">e</tspan>
+                    <tspan x="606.910992" y="95" letter-spacing="-3.27">u</tspan>
+                    <tspan x="662.576539" y="95">rial</tspan>
+                </text>
+                <text id="Endeavors" font-family="SFUIDisplay-Bold, SF UI Display" font-size="100" font-weight="bold" line-spacing="76" letter-spacing="-2.27272654" fill="#5C5C5C">
+                    <tspan x="114" y="190">Ende</tspan>
+                    <tspan x="338.991125" y="190" letter-spacing="-3.47">a</tspan>
+                    <tspan x="391.282844" y="190">v</tspan>
+                    <tspan x="441.54918" y="190" letter-spacing="-3.57">o</tspan>
+                    <tspan x="496.621758" y="190" letter-spacing="-2.27">r</tspan>
+                    <tspan x="531.412305" y="190">s</tspan>
+                </text>
+                <path d="M75,73 L73.9330893,73 L75,73 L50,73 L50,48 L37,48 L37,48.0098172 C30.3282334,48.2722691 25,53.7638968 25,60.5 C25,60.6674562 25.0032928,60.8341432 25.0098172,61 L25,61 L25,73 L0,73 L0,61 L0.00326517383,61 C0.00109063701,60.8335926 0,60.6669236 0,60.5 C0,39.7893219 16.7893219,23 37.5,23 C37.6669236,23 37.8335926,23.0010906 38,23.0032652 L38,23 L50,23 L50,25.1338213 L50,23 L75,23 L75,73 Z M50,98 L75,98 L75,110 L74.9967348,110 C74.9989094,110.166407 75,110.333076 75,110.5 C75,131.210678 58.2106781,148 37.5,148 C37.3330764,148 37.1664074,147.998909 37,147.996735 L37,148 L25,148 L25,145.866179 L25,148 L0,148 L0,98 L25,98 L25,123 L38,123 L38,122.990183 C44.6717666,122.727731 50,117.236103 50,110.5 C50,110.332544 49.9967072,110.165857 49.9901828,110 L50,110 L50,98 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

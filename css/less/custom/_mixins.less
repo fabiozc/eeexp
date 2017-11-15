@@ -1,0 +1,120 @@
+﻿// UTILITY MIXINS
+
+// Clearfix
+.clearfix{ *zoom: 1;
+	&:before,
+	&:after{ display: table; content: ""; line-height: 0;}
+	&:after{ clear: both;}
+}
+
+// Webkit-style focus
+.tab-focus(){ outline: none !important; outline: 0 auto none; outline-offset: 0;}
+
+// IE7 inline-block
+.ie7-inline-block(){ *display: inline; *zoom: 1;}
+
+// Placeholder text
+.placeholder(@color: @placeholderText) {
+	&:-moz-placeholder{ color: @color;}
+	&:-ms-input-placeholder{ color: @color;}
+	&::-webkit-input-placeholder{ color: @color;}
+}
+
+// Text overflow ---Requires inline-block or block for proper styling
+.text-overflow(){ overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.multiline-ellipsis(@font-size: @regularFont, @line-height: 1.25, @lines-to-show: 2){ display: block; display: -webkit-box; font-size: @font-size; line-height: @line-height; -webkit-line-clamp: @lines-to-show; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; height: (@font-size*@line-height*@lines-to-show)+(@padding/4)-1px; max-width: @sidebarSize;}
+
+// Sizing shortcuts
+.size(@width,@height){ width: @width; height: @height;}
+.square(@size){ .size(@size, @size);}
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Border Radius
+@bRadius: @baseBorderRadius;
+.border-radius(@radius: @bRadius){ border-radius: @radius;}
+.border-radius-TL(@radiusTL: @bRadius){ border-top-left-radius: @radiusTL;}
+.border-radius-TR(@radiusTR: @bRadius){ border-top-right-radius: @radiusTR;}
+.border-radius-BL(@radiusBL: @bRadius){ border-bottom-left-radius: @radiusBL;}
+.border-radius-BR(@radiusBR: @bRadius){ border-bottom-right-radius: @radiusBR;}
+.border-radius-L(@radiusL: @bRadius){ border-top-left-radius: @radiusL; border-bottom-left-radius: @radiusL;}
+.border-radius-R(@radiusR: @bRadius){ border-top-right-radius: @radiusR; border-bottom-right-radius: @radiusR;}
+.border-radius-T(@radiusT: @bRadius){ border-top-left-radius: @radiusT; border-top-right-radius: @radiusT;}
+.border-radius-B(@radiusB: @bRadius){ border-bottom-left-radius: @radiusB; border-bottom-right-radius: @radiusB;}
+
+// Shadows
+.box-shadow(@shadow: 0 1px 4px rgba(0,0,0,.15)){ box-shadow: @shadow;}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25){ box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);}
+
+// Opacity
+.opacity(@opacity){ opacity: @opacity / 100; filter: ~"alpha(opacity=@{opacity})";}
+
+// Box sizing
+.box-sizing(@boxmodel){ box-sizing: @boxmodel;}
+
+// Transformations
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+      -ms-transform: scale(@ratio);
+          transform: scale(@ratio);
+}
+
+// Transitions
+.transition(@transition) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+
+// Turn text unselectable !non-standard rule!
+.user-select(@select:none){
+  -webkit-user-select: @select;
+  	 -moz-user-select: @select; 
+  	  -ms-user-select: @select;
+  		  user-select: @select;
+}
+
+// Gradients
+#gradient {
+	.horizontal(@startColor: #555, @endColor: #333) {
+		background-color: @endColor;
+		background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: linear-gradient(to right, @startColor, @endColor); // Standard, IE10
+		background-repeat: repeat-x;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+	}
+	.vertical(@startColor: #555, @endColor: #333) {
+		background-color: mix(@startColor, @endColor, 60%);
+		background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+		background-repeat: repeat-x;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+	}
+	.horizontal-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+		background-color: mix(@midColor, @endColor, 80%);
+		background-image: -webkit-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: linear-gradient(to right, @startColor, @midColor @colorStop, @endColor);
+		background-repeat: no-repeat;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+	.vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+		background-color: mix(@midColor, @endColor, 80%);
+		background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+		background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+		background-repeat: no-repeat;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+}
+
+// Width Calc
+.calc-width(@margin, @fallback) {
+	width: @fallback;
+	width: -webkit-calc(~"100% - "@margin); /** Safari 6, Chrome 19-25 **/
+	width: -moz-calc(~"100% - "@margin); /** FF 4-15  **/
+	width: calc(~"100% - "@margin); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and future other browsers **/
+}
