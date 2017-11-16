@@ -74,7 +74,7 @@
 // Turn text unselectable !non-standard rule!
 .user-select(@select:none){
   -webkit-user-select: @select;
-  	 -moz-user-select: @select; 
+  	 -moz-user-select: @select;
   	  -ms-user-select: @select;
   		  user-select: @select;
 }
@@ -108,6 +108,16 @@
 		background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
 		background-repeat: no-repeat;
 		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+	.diagonal(@angle: 45deg, @startColor: @stColor, @endColor: @ndColor){
+		background: @startColor; /* Old browsers */
+		background: -moz-linear-gradient(@angle, @startColor 0%, @endColor 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,@startColor), color-stop(100%,@endColor)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(@angle, @startColor 0%,@endColor 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(@angle, @startColor 0%,@endColor 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(@angle, @startColor 0%,@endColor 100%); /* IE10+ */
+		background: linear-gradient(@angle, @startColor 0%,@endColor 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@startColor', endColorstr='@endColor',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	}
 }
 
