@@ -130,7 +130,7 @@ input {
   height: 1.7;
   padding: 4px 6px;
   margin-bottom: 9px;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.7;
   color: #888888;
   border-radius: 4px;
@@ -262,7 +262,7 @@ textarea {
 }
 html {
   overflow-x: hidden;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.7;
   height: 100%;
 }
@@ -329,7 +329,6 @@ img {
 }
 .main-section:not(.intro) {
   position: relative;
-  background-color: #FFF;
   padding-bottom: 60px;
 }
 .main-section:nth-child(1) {
@@ -338,22 +337,22 @@ img {
   right: 0;
   left: 0;
   z-index: -1;
-  height: 560px;
+  height: 750px;
 }
-.main-section:nth-child(2) {
-  margin-top: 560px;
-  padding-top: 60px;
-}
-.main-section:nth-child(2):before {
+.main-section:nth-child(1):after {
   position: absolute;
-  top: -50px;
+  bottom: -530px;
   background-color: #FFF;
   border-radius: 100% 100%;
   content: "";
   display: block;
-  margin: -80px 0 0 -30vw;
+  margin: -80px 0 0 -31vw;
   width: 160vw;
   height: 600px;
+}
+.main-section:nth-child(2) {
+  margin-top: 750px;
+  padding-top: 60px;
 }
 .section-title,
 .section-subtitle {
@@ -553,9 +552,13 @@ img {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@startColor', endColorstr='@endColor', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
   color: #FFF;
-  min-height: 560px;
+  min-height: 750px;
   text-align: center;
   width: 100%;
+}
+.intro:after {
+  content: "";
+  display: block;
 }
 .intro .intro-title {
   display: block;
@@ -584,5 +587,26 @@ img {
   .intro .intro-title {
     margin-top: 20px;
   }
+}
+/* INTRO ------------------------------ */
+.experiences .container {
+  position: relative;
+  top: -350px;
+  z-index: 1;
+  margin-bottom: -300px;
+}
+.experiences .exp-item {
+  background-color: #FFF;
+  border-radius: 80px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 0 20px 65px rgba(50, 50, 50, 0.15);
+  display: inline-block;
+  margin-right: 4.6%;
+  width: 30%;
+  min-height: 650px;
+}
+.experiences .exp-item:last-child {
+  margin-right: 0;
 }
 /*# sourceMappingURL=style.css.map */
