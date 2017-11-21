@@ -1,1 +1,1 @@
-$(document).scroll(function(){1.3*$(this).scrollTop()<$(window).height()?$(".js-intro").css({opacity:1-parseInt($(this).scrollTop())/(parseInt($(".js-intro").css("height"))/1.3)}):$(".js-intro").css({opacity:0})});
+$(document).scroll(function(){1.3*$(this).scrollTop()<$(window).height()?$(".js-intro").css({opacity:1-parseInt($(this).scrollTop())/(parseInt($(".js-intro").css("height"))/1.8)}):$(".js-intro").css({opacity:0})});
