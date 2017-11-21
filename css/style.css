@@ -414,70 +414,19 @@ img {
   padding: 60px;
   text-align: center;
 }
-.footer .btn-intro {
-  position: relative;
-  top: 0;
-  border-radius: 2px;
-  display: inline-block;
-  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1em;
-  letter-spacing: 0.8px;
-  line-height: 2.7;
-  margin: 0 0 -1px;
-  padding: 0 40px;
-  text-transform: uppercase;
-  background-color: transparent;
-  box-shadow: inset 0 0 0 1px rgba(41, 201, 99, 0.5);
-  color: rgba(41, 201, 99, 0.7);
+.footer .btn-secondary {
   margin-right: 40px;
 }
-.footer .btn-intro:hover {
-  box-shadow: inset 0 0 0 2px #29C963;
-  color: #29C963;
-}
-.footer .btn-intro:active {
-  background-color: #209f4e;
-  color: #FFF;
-}
-.footer .btn-contact {
-  position: relative;
-  top: 0;
-  border-radius: 2px;
-  display: inline-block;
-  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1em;
-  letter-spacing: 0.8px;
-  line-height: 2.7;
-  margin: 0 0 -1px;
-  padding: 0 40px;
-  text-transform: uppercase;
-  background-color: #29C963;
-  box-shadow: 0 20px 25px -10px rgba(41, 201, 99, 0.5);
-  color: #FFF;
+.footer .btn-primary {
   margin-left: 40px;
-}
-.footer .btn-contact:hover {
-  top: 2px;
-  background-color: #4bda7f;
-  box-shadow: 0 12px 20px -7px rgba(41, 201, 99, 0.5);
-  color: #FFF;
-}
-.footer .btn-contact:active {
-  top: 4px;
-  box-shadow: 0 3px 3px -3px rgba(41, 201, 99, 0.5);
-  color: #FFF;
 }
 @media (max-width: 980px) {
   .footer {
     font-size: 16px;
     padding: 30px;
   }
-  .footer .btn-intro,
-  .footer .btn-contact {
+  .footer .btn-secondary,
+  .footer .btn-primary {
     display: block;
     margin: 10px 0;
   }
