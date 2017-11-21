@@ -581,23 +581,33 @@ img {
   line-height: 1;
   margin-top: 160px;
 }
+@media (max-width: 980px) {
+  .intro .intro-title {
+    margin-top: 80px;
+  }
+}
 .intro .intro-description {
   display: block;
   font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   font-size: 0.55em;
-  margin: 15px 0 0 80px;
+  margin: 15px auto 0;
+  padding-left: 67px;
+  text-align: left;
+  white-space: nowrap;
+  width: 450px;
 }
 @media (max-width: 980px) {
-  .intro {
-    background-position: center bottom;
-    background-size: 63%;
-    font-size: 16px;
-    text-align: center;
+  .intro .intro-description {
+    font-size: 0.44em;
+    padding-left: 48px;
   }
-  .intro .intro-title {
-    margin-top: 20px;
+}
+@media (max-width: 980px) {
+  .intro .intro-logo,
+  .intro .intro-description {
+    max-width: 320px;
   }
 }
 /* INTRO ------------------------------ */
