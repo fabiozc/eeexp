@@ -182,6 +182,16 @@ textarea {
 .clearfix:after {
   clear: both;
 }
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+@media (max-width: 980px) {
+  .flex {
+    flex-flow: column;
+  }
+}
 @font-face {
   font-family: 'SourceSansPro-ExtraLight';
   src: url('/font/SourceSansPro-ExtraLight.eot');
@@ -590,7 +600,15 @@ img {
   position: relative;
   top: -350px;
   z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   margin-bottom: -300px;
+}
+@media (max-width: 980px) {
+  .experiences .container {
+    flex-flow: column;
+  }
 }
 .experiences .exp-item {
   background-color: #FFF;
@@ -598,21 +616,28 @@ img {
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
   box-shadow: 0 20px 65px rgba(50, 50, 50, 0.15);
-  display: inline-block;
-  margin-right: 4.6%;
-  width: 30%;
+  display: flex;
+  flex-flow: column;
+  flex: 1 0 80px;
+  margin: 0 40px 40px 0;
   min-height: 650px;
+  text-align: center;
 }
 .experiences .exp-item:last-child {
   margin-right: 0;
 }
+@media (max-width: 980px) {
+  .experiences .exp-item {
+    margin-right: 0;
+  }
+}
 .experiences .exp-title {
-  position: absolute;
-  right: 0;
+  align-self: flex-end;
   background-color: #4A4A4A;
   border-top-left-radius: 20px;
   color: #FFF;
   display: inline-block;
+  flex-shrink: 0;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
@@ -626,6 +651,13 @@ img {
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   text-transform: lowercase;
+}
+.experiences .exp-desc {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 20px 0;
 }
 .experiences .exp-btn {
   position: relative;
@@ -643,15 +675,10 @@ img {
   background-color: #29C963;
   box-shadow: 0 20px 25px -10px rgba(41, 201, 99, 0.5);
   color: #FFF;
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
   border-bottom-right-radius: 40px;
   display: inline-block;
+  flex-shrink: 0;
   margin: 40px;
-  text-align: center;
 }
 .experiences .exp-btn:hover {
   top: 2px;
@@ -663,9 +690,5 @@ img {
   top: 4px;
   box-shadow: 0 3px 3px -3px rgba(41, 201, 99, 0.5);
   color: #FFF;
-}
-.experiences .exp-btn:hover {
-  top: auto;
-  bottom: -2px;
 }
 /*# sourceMappingURL=style.css.map */

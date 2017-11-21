@@ -128,3 +128,10 @@
 	width: -moz-calc(~"100% - "@margin); /** FF 4-15  **/
 	width: calc(~"100% - "@margin); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and future other browsers **/
 }
+
+// Flex container to mobile
+.flex{ display: flex; flex-flow: row nowrap; justify-content: space-between;
+	@media (max-width: @mobile){
+		 flex-flow: column;
+	}
+}

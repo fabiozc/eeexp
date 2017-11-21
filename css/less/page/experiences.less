@@ -1,13 +1,13 @@
 ﻿/* INTRO ------------------------------ */
 .experiences{
-	.container{ position: relative; top: -350px; z-index: 1; margin-bottom: -300px;}
-	.exp-item{ background-color: @white; border-radius: 80px; .border-radius-TR(0); .border-radius-BL(0); box-shadow: 0 20px 65px rgba(50,50,50,.15); display: inline-block; margin-right: 4.6%; width: 30%; min-height: 650px;
+	.container{ position: relative; top: -350px; z-index: 1; .flex; margin-bottom: -300px;}
+	.exp-item{ background-color: @white; border-radius: 80px; .border-radius-TR(0); .border-radius-BL(0); box-shadow: 0 20px 65px rgba(50,50,50,.15); display: flex; flex-flow: column; flex: 1 0 80px; margin: 0 @space @space 0; min-height: 650px; text-align: center;
 		&:last-child{ margin-right: 0;}
+		@media (max-width: @mobile){ margin-right: 0;}
 	}
-	.exp-title{ position: absolute; right: 0; background-color: @grayDarker; .border-radius-TL(20px); color: @white; display: inline-block; .bold; font-size: @largeFont; margin-top: @margin; padding: @space/8 @space/2; text-transform: uppercase;
+	.exp-title{ align-self: flex-end; background-color: @grayDarker; .border-radius-TL(20px); color: @white; display: inline-block; flex-shrink: 0; .bold; font-size: @largeFont; margin-top: @margin; padding: @space/8 @space/2; text-transform: uppercase;
 		span{ .sansLight; text-transform: lowercase;}
 	}
-	.exp-btn{ .btn-primary; position: absolute; top: auto; bottom: 0; left: 0; right: 0; .border-radius-BR(40px); display: inline-block; margin: @margin; text-align: center;
-		&:hover{ top: auto; bottom: -2px;}
-	}
+	.exp-desc{ display: flex; flex-grow: 1; flex-direction: column; justify-content: flex-end; padding: @space*2 @space/2 0;}
+	.exp-btn{ .btn-primary; .border-radius-BR(40px); display: inline-block; flex-shrink: 0; margin: @margin;}
 }
