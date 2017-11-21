@@ -587,7 +587,7 @@ img {
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   font-size: 0.55em;
-  margin: 15px 0 0 3px;
+  margin: 15px 0 0 80px;
 }
 @media (max-width: 980px) {
   .intro {
