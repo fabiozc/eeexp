@@ -304,8 +304,8 @@ a {
 }
 a:hover {
   color: #4bda7f;
-  -webkit-transition: all 0.15s linear;
-  transition: all 0.15s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 img {
   text-decoration: none;
@@ -671,9 +671,9 @@ img {
   max-height: 700px;
   height: 70vh;
   text-align: center;
-}
-.experiences .exp-item:last-child {
-  margin-right: 0;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  transform-style: preserve-3d;
 }
 @media (max-width: 980px) {
   .experiences .exp-item {
@@ -685,6 +685,13 @@ img {
   .experiences .exp-item {
     min-height: 450px;
   }
+}
+.experiences .exp-item:last-child {
+  margin-right: 0;
+}
+.experiences .exp-item,
+.experiences .exp-item * {
+  cursor: pointer;
 }
 .experiences .exp-item.exp-item-individuals:before {
   background-image: url(../img/img-individuals.jpg);
@@ -723,7 +730,80 @@ img {
   width: 100%;
   height: 100%;
 }
+.experiences .exp-item .exp-title {
+  z-index: 1;
+  background-color: #4A4A4A;
+  border-top-left-radius: 20px;
+  color: #FFF;
+  display: inline-block;
+  flex-shrink: 0;
+  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-size: 1.7em;
+  align-self: flex-end;
+  margin-top: 40px;
+  padding: 7px 20px 5px;
+  text-transform: uppercase;
+}
+.experiences .exp-item .exp-title span {
+  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  text-transform: lowercase;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.experiences .exp-item .exp-desc {
+  z-index: 1;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 20px 0;
+}
+.experiences .exp-item .exp-btn {
+  z-index: 1;
+  position: relative;
+  top: 0;
+  border-radius: 2px;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  letter-spacing: 0.8px;
+  line-height: 2.7;
+  margin: 0 0 -1px;
+  padding: 0 40px;
+  text-transform: uppercase;
+  background-color: #29C963;
+  box-shadow: 0 20px 25px -10px rgba(41, 201, 99, 0.5);
+  color: #FFF;
+  border-bottom-right-radius: 40px;
+  box-shadow: none;
+  display: inline-block;
+  flex-shrink: 0;
+  margin: 40px;
+  padding: 0;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.experiences .exp-item .exp-btn:hover {
+  top: 2px;
+  background-color: #4bda7f;
+  box-shadow: 0 12px 20px -7px rgba(41, 201, 99, 0.5);
+  color: #FFF;
+}
+.experiences .exp-item .exp-btn:active {
+  top: 4px;
+  box-shadow: 0 3px 3px -3px rgba(41, 201, 99, 0.5);
+  color: #FFF;
+}
 .experiences .exp-item:hover {
+  z-index: 1;
+  box-shadow: 0 30px 85px rgba(0, 0, 0, 0.25);
   color: #000;
 }
 .experiences .exp-item:hover:before {
@@ -748,70 +828,15 @@ img {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@startColor', endColorstr='@endColor', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
-.experiences .exp-title {
-  z-index: 1;
-  background-color: #4A4A4A;
-  border-top-left-radius: 20px;
-  color: #FFF;
-  display: inline-block;
-  flex-shrink: 0;
-  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  font-size: 1.7em;
-  align-self: flex-end;
-  margin-top: 40px;
-  padding: 7px 20px 5px;
-  text-transform: uppercase;
+.experiences .exp-item:hover .exp-title,
+.experiences .exp-item:hover .exp-desc,
+.experiences .exp-item:hover .exp-btn {
+  transform: translateZ(15px);
 }
-.experiences .exp-title span {
-  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
-  font-weight: 100;
-  -webkit-font-smoothing: antialiased;
-  text-transform: lowercase;
-}
-.experiences .exp-desc {
-  z-index: 1;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px 20px 0;
-}
-.experiences .exp-btn {
-  z-index: 1;
-  position: relative;
-  top: 0;
-  border-radius: 2px;
-  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1em;
-  letter-spacing: 0.8px;
-  line-height: 2.7;
-  margin: 0 0 -1px;
-  padding: 0 40px;
-  text-transform: uppercase;
-  background-color: #29C963;
+.experiences .exp-item:hover .exp-btn {
   box-shadow: 0 20px 25px -10px rgba(41, 201, 99, 0.5);
-  color: #FFF;
-  border-bottom-right-radius: 40px;
-  display: inline-block;
-  flex-shrink: 0;
-  margin: 40px;
-  padding: 0;
 }
-.experiences .exp-btn:hover {
-  top: 2px;
-  background-color: #4bda7f;
-  box-shadow: 0 12px 20px -7px rgba(41, 201, 99, 0.5);
-  color: #FFF;
-}
-.experiences .exp-btn:active {
-  top: 4px;
-  box-shadow: 0 3px 3px -3px rgba(41, 201, 99, 0.5);
-  color: #FFF;
+.experiences .exp-item:hover .exp-title {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=style.css.map */
