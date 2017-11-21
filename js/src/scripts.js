@@ -1,5 +1,11 @@
 $(document).scroll(function() {
-	$(".js-intro").css({
-		"opacity": 1 - (parseInt($(this).scrollTop())/(parseInt($(".js-intro").css("height"))/1.3))
-	});
+	if(($(this).scrollTop() * 1.3) < $(window).height()){
+		$(".js-intro").css({
+			"opacity": 1 - (parseInt($(this).scrollTop())/(parseInt($(".js-intro").css("height"))/1.3))
+		});
+	} else {
+		$(".js-intro").css({
+			"opacity": 0
+		});
+	}
 });
