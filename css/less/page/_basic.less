@@ -34,9 +34,14 @@ img{ text-decoration: none; }
 @introHeight: 750px;
 .main-section:not(.intro){ position: relative; padding-bottom: @vSpace;}
 .main-section:nth-child(1){ position: fixed; top: 0; right: 0; left: 0; z-index: -1; height: @introHeight;
-    &:after{ position: absolute; top: @introHeight; background-color: @bgcolor; border-radius: 100% 100%; content: ""; display: block; margin: -80px 0 0 -30vw; width: 160vw; height: 600px;}
+    @media (max-width: @mobile){ height: @introHeight*0.75;}
+    &:after{ position: absolute; top: @introHeight; background-color: @bgcolor; border-radius: 100% 100%; content: ""; display: block; margin: -80px 0 0 -31vw; width: 160vw; height: 600px;
+        @media (max-width: @mobile){ top: @introHeight*0.75; height: @introHeight*0.75; height: 300px;}
+    }
 }
-.main-section:nth-child(2){ margin-top: @introHeight; padding-top: @vSpace;}
+.main-section:nth-child(2){ margin-top: @introHeight; padding-top: @vSpace;
+    @media (max-width: @mobile){ margin-top: @introHeight*0.75;}
+}
 
 .section-title,
 .section-subtitle{ display: block; .sansLight; font-size: @largerFont; margin: 0 0 @vSpace/2;
