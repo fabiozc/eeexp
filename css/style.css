@@ -1,6 +1,7 @@
 /*** FABIOZC ***/
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 strong {
+  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
@@ -35,7 +36,7 @@ a small {
 input,
 button {
   position: relative;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
@@ -129,7 +130,7 @@ input {
   height: 1.7;
   padding: 4px 6px;
   margin-bottom: 9px;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.7;
   color: #979797;
   border-radius: 4px;
@@ -193,40 +194,42 @@ textarea {
   }
 }
 @font-face {
-  font-family: 'SourceSansPro-ExtraLight';
-  src: url('/font/SourceSansPro-ExtraLight.eot');
-  src: url('/font/SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'), url('/font/SourceSansPro-ExtraLight.woff') format('woff'), url('/font/SourceSansPro-ExtraLight.ttf') format('truetype');
+  font-family: 'Metropolis-Thin';
+  src: url('/font/Metropolis-Thin.eot');
+  src: url('/font/Metropolis-Thin.eot?#iefix') format('embedded-opentype'), url('/font/Metropolis-Thin.woff') format('woff'), url('/font/Metropolis-Thin.woff2') format('woff2'), url('/font/Metropolis-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-stretch: normal;
 }
 @font-face {
-  font-family: 'SourceSansPro-Regular';
-  src: url('/font/SourceSansPro-Regular.eot');
-  src: url('/font/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'), url('/font/SourceSansPro-Regular.woff') format('woff'), url('/font/SourceSansPro-Regular.ttf') format('truetype');
+  font-family: 'Metropolis-Regular';
+  src: url('/font/Metropolis-Regular.eot');
+  src: url('/font/Metropolis-Regular.eot?#iefix') format('embedded-opentype'), url('/font/Metropolis-Regular.woff') format('woff'), url('/font/Metropolis-Regular.woff2') format('woff2'), url('/font/Metropolis-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
 }
 @font-face {
-  font-family: 'SourceSansPro-Bold';
-  src: url('/font/SourceSansPro-Bold.eot');
-  src: url('/font/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'), url('/font/SourceSansPro-Bold.woff') format('woff'), url('/font/SourceSansPro-Bold.ttf') format('truetype');
+  font-family: 'Metropolis-Bold';
+  src: url('/font/Metropolis-Bold.eot');
+  src: url('/font/Metropolis-Bold.eot?#iefix') format('embedded-opentype'), url('/font/Metropolis-Bold.woff') format('woff'), url('/font/Metropolis-Bold.woff2') format('woff2'), url('/font/Metropolis-Bold.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
 }
 .sansLight {
-  font-family: "SourceSansPro-ExtraLight", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
 }
 .sans {
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 .sansBold {
+  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 .serif {
@@ -235,11 +238,13 @@ textarea {
   -webkit-font-smoothing: antialiased;
 }
 .font-family {
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 .bold {
+  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
@@ -269,14 +274,14 @@ textarea {
 }
 html {
   overflow-x: hidden;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.7;
   height: 100%;
 }
 body {
   background-color: #f7f8fa;
   color: #707070;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   margin: 0;
@@ -364,7 +369,7 @@ img {
 .section-title,
 .section-subtitle {
   display: block;
-  font-family: "SourceSansPro-ExtraLight", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   font-size: 1.9em;
@@ -381,7 +386,7 @@ img {
 }
 .text-title {
   font-size: 0.8em;
-  font-family: "SourceSansPro-ExtraLight", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 4px;
@@ -397,7 +402,7 @@ img {
   top: 0;
   border-radius: 2px;
   display: inline-block;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
@@ -424,7 +429,7 @@ img {
   top: 0;
   border-radius: 2px;
   display: inline-block;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
@@ -474,7 +479,7 @@ img {
   top: 0;
   border-radius: 2px;
   display: inline-block;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
@@ -489,7 +494,7 @@ img {
   top: 0;
   border-radius: 2px;
   display: inline-block;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
@@ -518,7 +523,7 @@ img {
   top: 0;
   border-radius: 2px;
   display: inline-block;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
@@ -569,7 +574,7 @@ img {
 }
 .intro .intro-title {
   display: block;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 3.3em;
@@ -578,7 +583,7 @@ img {
 }
 .intro .intro-description {
   display: block;
-  font-family: "SourceSansPro-ExtraLight", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   font-size: 0.55em;
@@ -638,6 +643,8 @@ img {
   color: #FFF;
   display: inline-block;
   flex-shrink: 0;
+  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
@@ -647,7 +654,7 @@ img {
   text-transform: uppercase;
 }
 .experiences .exp-title span {
-  font-family: "SourceSansPro-ExtraLight", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   text-transform: lowercase;
@@ -663,7 +670,7 @@ img {
   position: relative;
   top: 0;
   border-radius: 2px;
-  font-family: "SourceSansPro-Regular", "Open Sans", Helvetica, sans-serif;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
@@ -679,6 +686,7 @@ img {
   display: inline-block;
   flex-shrink: 0;
   margin: 40px;
+  padding: 0;
 }
 .experiences .exp-btn:hover {
   top: 2px;
