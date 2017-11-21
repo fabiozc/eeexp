@@ -11,13 +11,13 @@
 		&:before{ position: absolute; background-position: center; background-repeat: no-repeat; background-size: cover; .border-radius-TL(80px); .border-radius-BR(80px); content: ""; display: block; -webkit-filter: hue-rotate(60deg) saturate(0); opacity: .2; width: 100%; height: 100%;}
 		&:after{ position: absolute; #gradient .vertical-three-colors(rgba(255,255,0,0),rgba(255,255,255,0), 20%,rgba(255,255,255,1)); .border-radius-TL(80px); .border-radius-BR(80px); content: ""; display: block; width: 100%; height: 100%;}
 		&:hover{ color: @black;
-			&:before{ -webkit-filter: hue-rotate(60deg) saturate(1.5); opacity: .5}
+			&:before{ -webkit-filter: hue-rotate(60deg) saturate(1.5); opacity: .4}
 			&:after{ #gradient .diagonal(45deg,@white,fade(@green,50%));}
 		}
 	}
 	.exp-title{ z-index: 1; background-color: @grayDarker; .border-radius-TL(20px); color: @white; display: inline-block; flex-shrink: 0; .bold; font-size: @largeFont; align-self: flex-end; margin-top: @margin; padding: (@space/8 + 2) @space/2 @space/8; text-transform: uppercase;
 		span{ .sansLight; text-transform: lowercase;}
 	}
-	.exp-desc{ z-index: 1; display: flex; flex-grow: 1; flex-direction: column; justify-content: flex-start; padding: @space @space/2 0;}
+	.exp-desc{ z-index: 1; display: flex; flex-grow: 1; flex-direction: column; justify-content: flex-end; padding: @space/2 @space/2 0;}
 	.exp-btn{ z-index: 1; .btn-primary; .border-radius-BR(40px); display: inline-block; flex-shrink: 0; margin: @margin; padding: 0;}
 }

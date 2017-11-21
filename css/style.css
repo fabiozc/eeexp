@@ -728,7 +728,7 @@ img {
 }
 .experiences .exp-item:hover:before {
   -webkit-filter: hue-rotate(60deg) saturate(1.5);
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .experiences .exp-item:hover:after {
   background: #FFF;
@@ -777,8 +777,8 @@ img {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 40px 20px 0;
+  justify-content: flex-end;
+  padding: 20px 20px 0;
 }
 .experiences .exp-btn {
   z-index: 1;
