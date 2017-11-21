@@ -348,12 +348,12 @@ img {
 }
 .main-section:nth-child(1):after {
   position: absolute;
-  bottom: -530px;
+  top: 750px;
   background-color: #FFF;
   border-radius: 100% 100%;
   content: "";
   display: block;
-  margin: -80px 0 0 -31vw;
+  margin: -80px 0 0 -30vw;
   width: 160vw;
   height: 600px;
 }
