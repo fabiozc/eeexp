@@ -30,6 +30,10 @@ img{ text-decoration: none; }
         @space: 15px;
         &{ font-size: 16px; padding: @space; width: 100%; text-align: center;}
     }
+    @media (max-width: @small-mobile){
+        @space: 15px;
+        &{ font-size: 14px; padding: @space; width: 100%; text-align: center;}
+    }
 }
 
 @introHeight: 750px;
@@ -58,10 +62,12 @@ img{ text-decoration: none; }
     @media (max-width: @mobile){
     	&{ font-size: 16px; padding: @vSpace/2;}
         .btn-secondary,
-        .btn-primary{ display: block; margin: @margin/4 0;}
+        .btn-primary{ display: block; margin: @margin/4 0; padding: 0 @padding/2;}
     }
 }
-.copy{ background: @white; display: block; font-size: 0.8rem; padding: @vSpace/2; text-align: center;}
+.copy{ background: @white; display: block; font-size: 0.8rem; padding: @vSpace/2; text-align: center;
+    @media (max-width: @mobile){ font-size: 0.6rem;}
+}
 
 
 /* SNIPPETS ---------------------------- */

@@ -704,6 +704,14 @@ img {
     text-align: center;
   }
 }
+@media (max-width: 321px) {
+  .container {
+    font-size: 14px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
 .main-section:not(.intro) {
   position: relative;
 }
@@ -803,6 +811,7 @@ img {
   .footer .btn-primary {
     display: block;
     margin: 10px 0;
+    padding: 0 20px;
   }
 }
 .copy {
@@ -811,6 +820,11 @@ img {
   font-size: 0.8rem;
   padding: 30px;
   text-align: center;
+}
+@media (max-width: 980px) {
+  .copy {
+    font-size: 0.6rem;
+  }
 }
 /* SNIPPETS ---------------------------- */
 /* BUTTONS ------------------------------ */
@@ -956,14 +970,20 @@ img {
 }
 @media (max-width: 980px) {
   .intro .intro-description {
-    font-size: 0.44em;
-    padding-left: 48px;
+    font-size: 6vmin;
+    padding-left: 11.77%;
   }
 }
 @media (max-width: 980px) {
   .intro .intro-logo,
   .intro .intro-description {
-    max-width: 320px;
+    width: 80%;
+    width: -webkit-calc(100% -  80px);
+    /** Safari 6, Chrome 19-25 **/
+    width: -moz-calc(100% -  80px);
+    /** FF 4-15  **/
+    width: calc(100% -  80px);
+    /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and future other browsers **/
   }
 }
 /* INTRO ------------------------------ */
@@ -1077,7 +1097,7 @@ img {
   color: #FFF;
   display: block;
   font-size: 3rem;
-  margin: 40px auto 40px;
+  margin: 40px auto;
   padding-top: 30px;
   width: 120px;
   height: 120px;
@@ -1089,6 +1109,11 @@ img {
   flex-grow: 1;
   flex-direction: column;
   padding: 20px 20px 0;
+}
+@media (max-width: 321px) {
+  .experiences .exp-item .exp-desc {
+    padding-top: 0;
+  }
 }
 .experiences .exp-item .exp-btn {
   z-index: 1;

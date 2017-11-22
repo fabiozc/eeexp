@@ -6,10 +6,10 @@
 		@media (max-width: @mobile){ margin-top: @space*2.5;}
 	}
 	.intro-description{ display: block; .sansLight; font-size: @smallestFont; margin: 15px auto 0; padding-left: 67px; text-align: left; white-space: nowrap; width: 450px;
-		@media (max-width: @mobile){ font-size: @smallestFont*0.8; padding-left: 48px;}
+		@media (max-width: @mobile){ font-size: 6vmin; padding-left: 11.77%;}
 	}
 	.intro-logo,
 	.intro-description{
-		@media (max-width: @mobile){ max-width: 320px;}
+		@media (max-width: @mobile){ .calc-width(@margin*2, 80%);}
 	}
 }
