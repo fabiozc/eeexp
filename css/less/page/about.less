@@ -7,5 +7,10 @@
         &-inspired:before{ .icon-idea2;}
         &-goal:before{ .icon-goal;}
         &-multiply:before{ .icon-networking2; margin-bottom: @margin*3;}
+        @media (max-width: @mobile){
+            &{ flex-grow: 1 0 100%; padding-left: 0; padding-right: 0; padding-bottom: @padding;}
+            &:nth-child(2n+1){ padding-right:0;}
+            &:before{ display: block; float: none; font-size: 3rem; margin: 0 auto @margin/2;}
+        }
     }
 }
