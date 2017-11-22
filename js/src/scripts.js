@@ -47,7 +47,12 @@ function expandExperience(event){
 		'left' : '10vw',
 		'width': '80vw',
 		'height': '80vh',
-		'position': 'fixed'
-	},1000);
+		'position': 'fixed',
+		'transform': 'scale(1)'
+	},500);
+
+	$el.css({
+		'opacity': '0'
+	});
 
 }
