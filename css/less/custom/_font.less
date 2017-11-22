@@ -1,46 +1,64 @@
-//@iconVersion: "v1.0";
+@fontIconVersion: "v1.0";
+
+@fontIcon: "Flaticon-@{fontIconVersion}";
+@fontFamily: "Metropolis";
 
 @font-face {
 	font-family: 'Metropolis-Thin' ;
-	src: url('@{baseUrl}/font/Metropolis-Thin.eot');
-	src: url('@{baseUrl}/font/Metropolis-Thin.eot?#iefix') format('embedded-opentype'),
-		url('@{baseUrl}/font/Metropolis-Thin.woff') format('woff'),
-		url('@{baseUrl}/font/Metropolis-Thin.woff2') format('woff2'),
-		url('@{baseUrl}/font/Metropolis-Thin.ttf') format('truetype');
+	src: url('@{baseUrl}/font/@{fontFamily}-Thin.eot');
+	src: url('@{baseUrl}/font/@{fontFamily}-Thin.eot?#iefix') format('embedded-opentype'),
+		url('@{baseUrl}/font/@{fontFamily}-Thin.woff') format('woff'),
+		url('@{baseUrl}/font/@{fontFamily}-Thin.woff2') format('woff2'),
+		url('@{baseUrl}/font/@{fontFamily}-Thin.ttf') format('truetype');
 	font-weight: 100;
 	font-style: normal;
 	font-stretch: normal;
 }
 @font-face {
-	font-family: 'Metropolis-Regular' ;
-	src: url('@{baseUrl}/font/Metropolis-Regular.eot');
-	src: url('@{baseUrl}/font/Metropolis-Regular.eot?#iefix') format('embedded-opentype'),
-		url('@{baseUrl}/font/Metropolis-Regular.woff') format('woff'),
-		url('@{baseUrl}/font/Metropolis-Regular.woff2') format('woff2'),
-		url('@{baseUrl}/font/Metropolis-Regular.ttf') format('truetype');
+	font-family: '@{fontFamily}-Regular' ;
+	src: url('@{baseUrl}/font/@{fontFamily}-Regular.eot');
+	src: url('@{baseUrl}/font/@{fontFamily}-Regular.eot?#iefix') format('embedded-opentype'),
+		url('@{baseUrl}/font/@{fontFamily}-Regular.woff') format('woff'),
+		url('@{baseUrl}/font/@{fontFamily}-Regular.woff2') format('woff2'),
+		url('@{baseUrl}/font/@{fontFamily}-Regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
 }
 @font-face {
-	font-family: 'Metropolis-Bold' ;
-	src: url('@{baseUrl}/font/Metropolis-Bold.eot');
-	src: url('@{baseUrl}/font/Metropolis-Bold.eot?#iefix') format('embedded-opentype'),
-		url('@{baseUrl}/font/Metropolis-Bold.woff') format('woff'),
-		url('@{baseUrl}/font/Metropolis-Bold.woff2') format('woff2'),
-		url('@{baseUrl}/font/Metropolis-Bold.ttf') format('truetype');
+	font-family: '@{fontFamily}-Bold' ;
+	src: url('@{baseUrl}/font/@{fontFamily}-Bold.eot');
+	src: url('@{baseUrl}/font/@{fontFamily}-Bold.eot?#iefix') format('embedded-opentype'),
+		url('@{baseUrl}/font/@{fontFamily}-Bold.woff') format('woff'),
+		url('@{baseUrl}/font/@{fontFamily}-Bold.woff2') format('woff2'),
+		url('@{baseUrl}/font/@{fontFamily}-Bold.ttf') format('truetype');
 	font-weight: 900;
 	font-style: normal;
 	font-stretch: normal;
 }
+@font-face {
+	font-family: '@{fontIcon}' ;
+	src: url('@{baseUrl}/font/@{fontIcon}.eot');
+	src: url('@{baseUrl}/font/@{fontIcon}.eot?#iefix') format('embedded-opentype'),
+		url('@{baseUrl}/font/@{fontIcon}.woff') format('woff'),
+		url('@{baseUrl}/font/@{fontIcon}.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: "@{fontIcon}";
+		src: url("@{baseUrl}/font/@{fontIcon}.svg#Flaticon") format("svg");
+	}
+}
 
-.sansLight{ font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif; font-weight: 100; -webkit-font-smoothing: antialiased;}
-.sans{ font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased;}
-.sansBold{ font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased;}
+.sansLight{ font-family: "@{fontFamily}-Thin", "Open Sans", Helvetica, sans-serif; font-weight: 100; -webkit-font-smoothing: antialiased;}
+.sans{ font-family: "@{fontFamily}-Regular", "Open Sans", Helvetica, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased;}
+.sansBold{ font-family: "@{fontFamily}-Bold", "Open Sans", Helvetica, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased;}
 .serif{ font-family: Georgia, serif; font-weight: 400; -webkit-font-smoothing: antialiased;}
 
 .font-family{ .sans;}
-//.font-icon{ font-family: 'mentorama-@{iconVersion}'; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; font-weight: normal; }
+.font-icon{ font-family: '@{fontIcon}'; font-style: normal; font-weight: normal; font-variant: normal; line-height: 1; text-decoration: inherit; text-rendering: optimizeLegibility; text-transform: none; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; font-smoothing: antialiased;}
 
 .bold{ .sansBold; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased;}
 .italic{ font-style: italic;}

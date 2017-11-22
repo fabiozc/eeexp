@@ -1,17 +1,25 @@
 ﻿// Colors -------------------------
 // EEexp Custom Colors
 @aqua: #00C9BE;
+@aqua2: lighten(saturate(@aqua,100%),15%);
 @green: #29C963;
 @greenBright: #46C600;
 
 // Other Colors
 @white: #FFF;
 @black: #000;
-@yellow: #FFCB41; //Sections
-@blue: #7989dd; //Slideshow Overlay (1x)
-@brown: #261B10; //Video Overlay (1x)
-@red: #ed2458; //Error for validation forms
+@yellow: #f6bf4e;
+@yellow2: lighten(saturate(@yellow,100%),15%);
+@blue: #3eb1ea;
+@blue2: lighten(saturate(@blue,100%),15%);
+@brown: #261B10;
+@brown2: lighten(saturate(@brown,100%),15%);
+@red: #ed2458;
+@red2: lighten(saturate(@red,100%),15%);
 @orange: #ff4623;
+@orange2: lighten(saturate(@orange,100%),15%);
+
+//Grays
 @grayLighter: lighten(@grayDarker,70%);
 @grayLight: lighten(@grayDarker,70%);
 @gray: lighten(@grayDarker,30%);
@@ -21,6 +29,7 @@
 // Background
 @bgcolor: @white;
 @bgcolor2: #f7f8fa;
+@bgcolor3: darken(@aqua,60%);
 
 // Main
 @stColor: @green;
@@ -73,7 +82,7 @@
 @heroFont:				3.3em;
 
 @baseFontFamily:        "Metropolis-Regular", Helvetica, Arial;
-@baseFontSize:          19px;
+@baseFontSize:          18px;
 @baseLineHeight:        1.7;
 
 @postFontSize:			@regularFont

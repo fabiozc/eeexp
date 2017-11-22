@@ -7,6 +7,7 @@
 @import "../custom/_mixins.less";
 @import "../custom/_font.less";
 @import "../custom/_common.less";
+@import "../custom/_icons.less";
 
 /* Basic CSS */
 *,
@@ -35,7 +36,7 @@ img{ text-decoration: none; }
 .main-section:not(.intro){ position: relative; padding-bottom: @vSpace;}
 .main-section:nth-child(1){ position: fixed; top: 0; right: 0; left: 0; z-index: -1; height: @introHeight;
     @media (max-width: @mobile){ height: @introHeight*0.75;}
-    &:after{ position: absolute; top: @introHeight; background-color: @bgcolor; border-radius: 100% 100%; content: ""; display: block; margin: -80px 0 0 -31vw; width: 160vw; height: 600px;
+    &:after{ position: absolute; top: @introHeight; background-color: @bgcolor2; border-radius: 100% 100%; content: ""; display: block; margin: -80px 0 0 -31vw; width: 160vw; height: 600px;
         @media (max-width: @mobile){ top: @introHeight*0.75; height: @introHeight*0.75; height: 300px;}
     }
 }

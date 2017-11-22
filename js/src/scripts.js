@@ -2,8 +2,8 @@ $(document).ready(function() {
 	introScrollEffect();
 	$('.js-exp-item').tilt({
 		scale: 1.05,
-		maxTilt: 8,
-		perspective: 1000,
+		maxTilt: 9,
+		perspective: 2000,
 		tiltSpeed: 400
 	});
 
