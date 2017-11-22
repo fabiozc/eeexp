@@ -22,7 +22,8 @@
 		.exp-btn{ z-index: 1; .btn-primary; .border-radius-BR(40px); box-shadow: none; display: inline-block; flex-shrink: 0; margin: @margin; padding: 0; .transition(all @anim ease-out);}
 
 
-		&:hover{ z-index: 1; box-shadow: 0 30px 85px rgba(0,0,0,.25); color: @black;
+		&:hover,
+		&.is-open{ z-index: 1; box-shadow: 0 30px 85px rgba(0,0,0,.25); color: @black;
 			&:before{ -webkit-filter: hue-rotate(60deg) saturate(1.5); opacity: .4}
 			&:after{ #gradient .diagonal(45deg,@white,fade(@green,50%));}
 			.exp-title,
@@ -31,5 +32,7 @@
 			.exp-btn{ .box-shadow(0 20px 25px -10px fade(@linkColor,50%));}
 			.exp-title{ box-shadow: 0 10px 20px rgba(0,0,0,.2)}
 		}
+
+//		&.is-open{ width: 80vw; height: 80vh;}
 	}
 }
