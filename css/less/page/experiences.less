@@ -19,7 +19,7 @@
 
 		.exp-title{ z-index: 1; #gradient .vertical-three-colors(rgba(255,255,255,0.75),rgba(255,255,255,.1),80%,rgba(255,255,255,.0)); .border-radius-TL(@cornerRadius); color: @grayDarker; display: inline-block; flex-shrink: 0; .bold; font-size: @largeFont; padding-top: @padding; text-transform: uppercase;
 			span{ .sansLight; text-transform: lowercase; .transition(all @anim ease-out);}
-			&:after{ .border-radius(5px); color: @white; display: block; font-size: 7vmin; margin: @space*1 auto @space*1; padding-top: @padding*0.75; .square(120px);}
+			&:after{ .border-radius(5px); color: @white; display: block; font-size: 3rem; margin: @space*1 auto @space*1; padding-top: @padding*0.75; .square(120px);}
 		}
 		.exp-desc{ z-index: 1; color: @grayDarker; display: flex; flex-grow: 1; flex-direction: column; padding: @space/2 @space/2 0;}
 		.exp-btn{ z-index: 1; .btn-primary; .border-radius-BR(40px); box-shadow: none; display: inline-block; flex-shrink: 0; margin: @margin; padding: 0; .transition(all @anim ease-out);}
@@ -36,7 +36,7 @@
 			&:before{ background-image: url(../img/img-corp.jpg);}
 			.exp-title:after{ #gradient .diagonal( 45deg, @blue, @blue2); .icon-team;}
 		}
-		
+
 		&:hover,
 		&.is-open{ z-index: 1; box-shadow: 0 30px 85px rgba(0,0,0,.25); color: @black;
 			&:before{ -webkit-filter: hue-rotate(60deg) saturate(1.5); opacity: .4}
