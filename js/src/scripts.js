@@ -27,11 +27,11 @@ function introScrollEffect(){
 
 $('.js-pagi').on('click', function (evt) {
 	evt.preventDefault();
-	if ($('.current').next().length == 0) {
-		$('.js-review-item').removeClass('current prev').first().addClass('current');
+	if ($('.is-current').next().length == 0) {
+		$('.js-review-item').removeClass('is-current is-prev').first().addClass('is-current');
 		return;
 	}
-	$('.current').addClass("prev").removeClass('current').next().removeClass("prev").addClass('current');
+	$('.is-current').addClass("is-prev").removeClass('is-current').next().removeClass("is-prev").addClass('is-current');
 });
 
 function expandExperience(event){
