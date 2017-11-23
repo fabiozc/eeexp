@@ -1,0 +1,13 @@
+.review{ #gradient .diagonal; color: @white; padding: @padding 0; text-align: center;
+    .review-container{ display: flex; margin-top: @margin; padding: 0 @padding; height: 300px;}
+    .review-item{ position: absolute; flex: 0; right: 0; left: auto; margin-left: 100%; opacity: 0; .transition(all 1s ease); width: 100%;
+        &.current{ flex: 1; margin-left: 0; opacity: 1; right: auto; left: 0;}
+        &.prev{ flex: 0; margin-left: -100%; opacity: 0; left: 0;}
+        @media (max-width: @mobile){}
+    }
+    .review-quote{ .italic; font-size: @titleFont; padding: 0; text-align: left;}
+    .review-image{ .border-radius(100%); border: 3px solid @white; box-shadow: 0 10px 20px -10px rgba(0,0,0,.3); display: inline-block; float: left; margin: @margin/4 @margin*1.5 @margin 0; .square(200px);}
+    .review-text{ padding-right: @padding; width: 100%; min-width: 100%;}
+    .review-author{ margin-top: @margin/2;}
+    .review-pag{ .btn-secondary-inverted; margin: 0 auto @space;}
+}

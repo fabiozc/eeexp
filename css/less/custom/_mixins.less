@@ -130,7 +130,7 @@
 }
 
 // Flex container to mobile
-.flex{ display: flex; flex-flow: row wrap; justify-content: space-between;
+.flex(@flexDirection: row, @flewWrap: wrap, @justifyContent: space-between){ display: flex; flex-flow: @flexDirection @flewWrap; justify-content: @justifyContent;
 	@media (max-width: @mobile){
 		 flex-flow: column;
 	}

@@ -25,6 +25,15 @@ function introScrollEffect(){
 	}
 }
 
+$('.js-pagi').on('click', function (evt) {
+	evt.preventDefault();
+	if ($('.current').next().length == 0) {
+		$('.js-review-item').removeClass('current prev').first().addClass('current');
+		return;
+	}
+	$('.current').addClass("prev").removeClass('current').next().removeClass("prev").addClass('current');
+});
+
 function expandExperience(event){
 	var container = $('.js-request');
 	var $el = $(event.currentTarget);

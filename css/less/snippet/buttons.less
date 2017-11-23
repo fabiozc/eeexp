@@ -8,3 +8,7 @@
 	&:hover{ .box-shadow(inset 0 0 0 2px @linkColor); color: @linkColor;}
 	&:active{ background-color: @linkActiveColor; color: @white;}
 }
+.btn-secondary-inverted{ .btn; background-color: transparent; .box-shadow(inset 0 0 0 1px fade(@white,50%)); color: fade(@white,90%);
+	&:hover{ .box-shadow(inset 0 0 0 2px @white); color: @white;}
+	&:active{ background-color: fade(@white,75%); color: @white;}
+}
