@@ -769,6 +769,15 @@ img {
   margin: 40px 0 0;
   text-transform: uppercase;
 }
+.section-title:after {
+  background-color: #29C963;
+  content: "";
+  display: block;
+  font-size: 0;
+  margin: 5px auto 10px;
+  width: 120px;
+  height: 3px;
+}
 .section-subtitle {
   font-size: 1.4em;
   font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
@@ -824,6 +833,7 @@ img {
   position: relative;
   top: 0;
   border-radius: 2px;
+  cursor: pointer;
   display: inline-block;
   font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
@@ -839,6 +849,7 @@ img {
   position: relative;
   top: 0;
   border-radius: 2px;
+  cursor: pointer;
   display: inline-block;
   font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
@@ -868,6 +879,7 @@ img {
   position: relative;
   top: 0;
   border-radius: 2px;
+  cursor: pointer;
   display: inline-block;
   font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
@@ -894,6 +906,7 @@ img {
   position: relative;
   top: 0;
   border-radius: 2px;
+  cursor: pointer;
   display: inline-block;
   font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
@@ -1138,6 +1151,7 @@ img {
   position: relative;
   top: 0;
   border-radius: 2px;
+  cursor: pointer;
   font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -1462,6 +1476,9 @@ img {
     padding: 0;
   }
 }
+.review .section-title:after {
+  background-color: rgba(255, 255, 255, 0.7);
+}
 .review .review-container {
   display: flex;
   margin-top: 40px;
@@ -1552,6 +1569,7 @@ img {
   position: relative;
   top: 0;
   border-radius: 2px;
+  cursor: pointer;
   display: inline-block;
   font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;

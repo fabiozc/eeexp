@@ -52,7 +52,9 @@ img{ text-decoration: none; }
 .section-subtitle{ display: block; margin: 0 ; text-align: center;
 	@media (max-width: @mobile){ margin: 0 @vSpace/3 @vSpace/2;}
 }
-.section-title{ font-size: @largerFont; .bold; margin: @space 0 0 ; text-transform: uppercase;}
+.section-title{ font-size: @largerFont; .bold; margin: @space 0 0 ; text-transform: uppercase;
+    &:after{ background-color: @stColor; content: ""; display: block; font-size: 0; margin: @margin/8 auto @margin/4; width: @space*3; height: 3px;}
+}
 .section-subtitle{ font-size: @titleFont; .sansLight;}
 .text-title{ font-size: @smallFont; .sansLight; letter-spacing: 4px; margin: @vSpace 0 0 0; text-transform: uppercase;}
 
