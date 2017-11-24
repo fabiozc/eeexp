@@ -1,1 +1,9 @@
-.partners{ background: @bgcolor2; padding: @vSpace; text-align: center;}
+.partners{ background: @bgcolor2; margin-top: @vSpace/2; padding: @vSpace/2 0; text-align: center;
+    .partners-logo{ background-repeat: no-repeat; background-size: 50%; background-position: center; display: inline-block; filter: saturate(0%) brightness(0%); -webkit-filter: saturate(0%) brightness(0%); margin: @vSpace/4 0; opacity: .5; text-indent: -9999px; width: 33%; height: 114px/2; max-height: 50%;
+        @media (max-width: @mobile){ width: 300px;}
+        &.partner-airbnb{ background-image: url("@{baseUrl}/img/partner-airbnb.png");}
+        &.partner-booking{ background-image: url("@{baseUrl}/img/partner-booking.png");}
+        &.partner-emirates{ background-image: url("@{baseUrl}/img/partner-emirates.png");}
+        //&:hover{ filter: saturate(100%) brightness(100%); -webkit-filter: saturate(100%) brightness(100%); opacity: 1;}
+    }
+}

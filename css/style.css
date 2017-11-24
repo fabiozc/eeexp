@@ -1593,9 +1593,59 @@ img {
   background-color: rgba(255, 255, 255, 0.75);
   color: #FFF;
 }
+.map {
+  background: url("/img/map.png") no-repeat center top;
+  background-size: contain;
+  padding-top: 320px;
+  min-height: 580px;
+}
+@media (max-width: 980px) {
+  .map {
+    padding-top: 160px;
+  }
+}
+.map .map-container {
+  background-color: white;
+  box-shadow: 0px 10px 50px -15px rgba(0, 0, 0, 0.3);
+  padding: 10px 40px;
+  width: 100%;
+  max-width: 880px;
+}
+.map .section-title {
+  margin-top: 0;
+}
 .partners {
   background: #f7f8fa;
-  padding: 60px;
+  margin-top: 30px;
+  padding: 30px 0;
   text-align: center;
+}
+.partners .partners-logo {
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  display: inline-block;
+  filter: saturate(0%) brightness(0%);
+  -webkit-filter: saturate(0%) brightness(0%);
+  margin: 15px 0;
+  opacity: .5;
+  text-indent: -9999px;
+  width: 33%;
+  height: 57px;
+  max-height: 50%;
+}
+@media (max-width: 980px) {
+  .partners .partners-logo {
+    width: 300px;
+  }
+}
+.partners .partners-logo.partner-airbnb {
+  background-image: url("/img/partner-airbnb.png");
+}
+.partners .partners-logo.partner-booking {
+  background-image: url("/img/partner-booking.png");
+}
+.partners .partners-logo.partner-emirates {
+  background-image: url("/img/partner-emirates.png");
 }
 /*# sourceMappingURL=style.css.map */
