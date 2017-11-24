@@ -8,6 +8,7 @@ $(document).ready(function() {
 	});
 
 	$('.js-exp-item').on('click tap',$.proxy(expandExperience, self));
+	//$('.js-exp-item.is-open').on('click tap',closeExperience());
 
 
 	$(".js-scroll").click(function(e) {
@@ -44,8 +45,8 @@ $('.js-pagi').on('click', function (e) {
 function expandExperience(event){
 	var container = $('.js-request');
 	var $el = $(event.currentTarget);
-    // 
-	// console.log(container.find('.exp-item').hasClass("is-open"));
+
+	//console.log(container.children(":first").hasClass("is-open"));
 	// if(container.find('.exp-item').hasClass("is-open")){
 	// 	$el.removeAttr('style').addClass('is-open');
 	// 	container.removeAttr('style').animate({
@@ -82,4 +83,8 @@ function expandExperience(event){
 	$el.css({
 		'opacity': '0'
 	});
+	container.find('.exp-item').children().animate({ 'opacity':'0'}, function(){ container.find('.exp-item').empty(); });
+}
+
+function closeExperience(){
 }
