@@ -8,6 +8,13 @@ $(document).ready(function() {
 	});
 
 	$('.js-exp-item').on('click tap',$.proxy(expandExperience, self));
+
+
+	$(".js-scroll").click(function(e) {
+	    e.preventDefault();
+	    var aid = $(this).attr("href");
+	    $('html,body').animate({scrollTop: $(aid).offset().top - 330},'slow');
+	});
 });
 $(document).scroll(function() {
 	introScrollEffect();
@@ -25,8 +32,8 @@ function introScrollEffect(){
 	}
 }
 
-$('.js-pagi').on('click', function (evt) {
-	evt.preventDefault();
+$('.js-pagi').on('click', function (e) {
+	e.preventDefault();
 	if ($('.is-current').next().length == 0) {
 		$('.js-review-item').removeClass('is-current is-prev').first().addClass('is-current');
 		return;
@@ -37,6 +44,18 @@ $('.js-pagi').on('click', function (evt) {
 function expandExperience(event){
 	var container = $('.js-request');
 	var $el = $(event.currentTarget);
+    // 
+	// console.log(container.find('.exp-item').hasClass("is-open"));
+	// if(container.find('.exp-item').hasClass("is-open")){
+	// 	$el.removeAttr('style').addClass('is-open');
+	// 	container.removeAttr('style').animate({
+	// 		'opacity': '0'
+	// 	}, function(){
+	// 		container.hide();
+	// 	});
+	// 	console.log("a");
+	// 	return;
+	// }
 
 	container.removeAttr('style').empty();
 
@@ -63,5 +82,4 @@ function expandExperience(event){
 	$el.css({
 		'opacity': '0'
 	});
-
 }
