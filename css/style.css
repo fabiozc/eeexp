@@ -1291,27 +1291,8 @@ img {
 }
 .experiences .exp-item:hover:before,
 .experiences .exp-item.is-open:before {
-  -webkit-filter: hue-rotate(60deg) saturate(1.5);
-  opacity: 0.4;
-}
-.experiences .exp-item:hover:after,
-.experiences .exp-item.is-open:after {
-  background: #FFF;
-  /* Old browsers */
-  background: -moz-linear-gradient(45deg, #FFF 0%, rgba(41, 201, 99, 0.5) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #FFF), color-stop(100%, rgba(41, 201, 99, 0.5)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg, #FFF 0%, rgba(41, 201, 99, 0.5) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg, #FFF 0%, rgba(41, 201, 99, 0.5) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg, #FFF 0%, rgba(41, 201, 99, 0.5) 100%);
-  /* IE10+ */
-  background: linear-gradient(45deg, #FFF 0%, rgba(41, 201, 99, 0.5) 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@startColor', endColorstr='@endColor', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+  -webkit-filter: saturate(1.5);
+  opacity: 0.3;
 }
 .experiences .exp-item:hover .exp-title,
 .experiences .exp-item.is-open .exp-title,
