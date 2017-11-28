@@ -1549,9 +1549,10 @@ img {
   }
 }
 .review .review-image {
-  border-radius: 100%;
+  border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
   border: 3px solid #FFF;
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 30px -20px rgba(0, 0, 0, 0.5);
   display: inline-block;
   float: left;
   margin: 10px 60px 40px 0;
