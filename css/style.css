@@ -785,12 +785,19 @@ img {
   -webkit-font-smoothing: antialiased;
 }
 .text-title {
-  font-size: 0.8em;
-  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
-  font-weight: 100;
+  font-size: 1.2em;
+  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+.small-title {
+  font-size: 0.8em;
   letter-spacing: 4px;
-  margin: 60px 0 0 0;
+  margin: 0 0 20px 0;
   text-transform: uppercase;
 }
 .footer {
@@ -1361,19 +1368,22 @@ img {
 }
 .about .feature-item {
   flex: 1 0 50%;
-  padding-left: 40px;
   font-size: 0.8em;
+  margin-bottom: 80px;
+  padding: 0 40px 0 100px;
 }
-.about .feature-item:nth-child(2n+1) {
-  padding-left: 0;
-  padding-right: 40px;
+.about .feature-item:nth-child(2n+0) {
+  margin-left: 40px;
+  margin-right: -40px;
 }
 .about .feature-item:before {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: inline-block;
   color: #29C963;
-  float: left;
   font-size: 4rem;
-  margin: 6.66666667px 40px 120px 0;
+  margin: 6.66666667px 40px 40px 0;
   text-align: center;
 }
 .about .feature-item-passion:before {
@@ -1448,6 +1458,16 @@ img {
     font-size: 3rem;
     margin: 0 auto 20px;
   }
+}
+.about .feature-item .feature-title {
+  font-size: 1.2em;
+  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
 }
 .review {
   background: #29C963;

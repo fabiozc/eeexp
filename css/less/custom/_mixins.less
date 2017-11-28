@@ -64,6 +64,11 @@
       -ms-transform: scale(@ratio);
           transform: scale(@ratio);
 }
+.translate(@xAxis: 0, @yAxis: 0){
+	-webkit-transform: translate(@xAxis,@yAxis);
+        -ms-transform: translate(@xAxis,@yAxis);
+            transform: translate(@xAxis,@yAxis);
+}
 
 // Transitions
 .transition(@transition) {
