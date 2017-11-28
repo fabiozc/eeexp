@@ -1621,18 +1621,17 @@ img {
   text-align: center;
 }
 .partners .partners-logo {
+  position: relative;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: contain;
   background-position: center;
   display: inline-block;
   filter: saturate(0%) brightness(0%);
   -webkit-filter: saturate(0%) brightness(0%);
-  margin: 15px 0;
+  margin: 15px 40px;
   opacity: .5;
   text-indent: -9999px;
-  width: 33%;
-  height: 57px;
-  max-height: 50%;
+  height: 50px;
 }
 @media (max-width: 980px) {
   .partners .partners-logo {
@@ -1641,11 +1640,25 @@ img {
 }
 .partners .partners-logo.partner-airbnb {
   background-image: url("/img/partner-airbnb.png");
+  width: 181px;
 }
 .partners .partners-logo.partner-booking {
   background-image: url("/img/partner-booking.png");
+  width: 230.5px;
 }
 .partners .partners-logo.partner-emirates {
   background-image: url("/img/partner-emirates.png");
+  width: 207.5px;
+}
+.partners .partners-logo.partner-tsh {
+  top: -15px;
+  margin-bottom: -15px;
+  background-image: url("/img/partner-tsh.png");
+  width: 144px;
+  height: 80px;
+}
+.partners .partners-logo.partner-viator {
+  background-image: url("/img/partner-viator.png");
+  width: 124px;
 }
 /*# sourceMappingURL=style.css.map */
