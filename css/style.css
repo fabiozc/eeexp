@@ -1633,6 +1633,8 @@ img {
 }
 @media (max-width: 980px) {
   .review .review-image {
+    border-top-left-radius: 32px;
+    border-bottom-right-radius: 32px;
     border-width: 2px;
     display: block;
     float: none;
