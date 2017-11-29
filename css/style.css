@@ -1420,6 +1420,12 @@ img {
   transform: scale(1.05);
   overflow: visible !important;
 }
+@media (max-width: 980px) {
+  .request {
+    min-width: 100vw;
+    transform: translateX(-10vw) translateY(-3vh);
+  }
+}
 .about .about-features {
   display: flex;
   flex-flow: row wrap;
