@@ -1340,6 +1340,10 @@ img {
 .experiences .exp-item.is-open .exp-title:after {
   box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.2);
 }
+.experiences .exp-item.is-open {
+  cursor: default;
+  margin-bottom: 0;
+}
 .experiences .exp-item.is-open .exp-desc {
   justify-content: flex-start;
 }
@@ -1347,8 +1351,70 @@ img {
   align-self: center;
   padding: 0 40px;
 }
+/* MODALS ------------------------------ */
+.overlay {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 25, 0, 0.65);
+  display: block;
+  opacity: .0;
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  font-size: 2.7em;
+  font-family: "Metropolis-Thin", "Open Sans", Helvetica, sans-serif;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+}
+.modal-close:hover {
+  color: #FFF;
+}
+.modal {
+  z-index: 101;
+  position: fixed;
+  *zoom: 1;
+  margin: 0 auto;
+  width: 1160px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+.modal:before,
+.modal:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.modal:after {
+  clear: both;
+}
+@media (max-width: 980px) {
+  .modal {
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 321px) {
+  .modal {
+    font-size: 14px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
 .request {
-  z-index: 3;
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);

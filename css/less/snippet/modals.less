@@ -1,0 +1,8 @@
+/* MODALS ------------------------------ */
+.overlay{ z-index: 100; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,25,0,.65); display: block; opacity: .0;}
+.modal-close{ position: absolute; top: 20px; right: 20px; color: fade(@white,75%); cursor: pointer; font-size: @largestFont; .sansLight; line-height: 30px; .square(30px);
+    &:hover{ color: @white;}
+}
+.modal{ z-index: 101; position: fixed; .container;// width: 90vw; height: 90vh; max-width: 800px
+    //@media (max-width: @mobile){ width: 96vw; height: 96vh; }
+}
