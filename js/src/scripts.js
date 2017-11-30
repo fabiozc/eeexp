@@ -21,12 +21,13 @@ function destroyOverlay(){
 		overlay.remove();
 	});
 	$(".js-request").empty();
-	$(".js-exp-item").css("opacity","1");
+	$('.js-request-item').hide();
 }
 
 function expandExperience(event){
 	var container = $('.js-request');
 	var $el = $(event.currentTarget);
+	var elementType = $el.data('type');
 
 	callOverlay();
 	container.attr('aria-hidden','false').removeAttr('style').empty();
@@ -39,7 +40,7 @@ function expandExperience(event){
 	container.find('.exp-item').removeClass('.js-exp-item').removeAttr('style').addClass('is-open');
 	container.show().addClass("modal").css({
 		'position' : 'fixed',
-		'top' : getTop + 14,
+		'top' : getTop,
 		'left' : getLeft,
 		'width': getWitdh
 	}).animate({
@@ -47,12 +48,12 @@ function expandExperience(event){
 		'left' : '15vw',
 		'width': '70vw',
 		'position': 'fixed',
-	},500);
+	},300);
 
 	container.find('.exp-item').children().animate({
-		 'opacity':'0'
+		'opacity':'0'
 	 }, function(){
-		 container.find('.exp-item').empty().append($('.js-request-individuals').show().get(0).outerHTML);
+		container.find('.exp-item').empty().append($('.js-request-item[data-item="'+ elementType + '"]').show().get(0).outerHTML);
 	 });
 }
 
@@ -65,8 +66,6 @@ $(document).ready(function() {
 		tiltSpeed: 400
 	});
 	$('.js-exp-item').on('click tap',$.proxy(expandExperience, self));
-	//$('.js-exp-item.is-open').on('click tap',closeExperience());
-
 
 	$(".js-scroll").on("click tap", function(e) {
 	    e.preventDefault();
@@ -77,12 +76,6 @@ $(document).ready(function() {
 $('a[href="#"]').click( function(e) {
 	e.preventDefault();
 });
-// $('a[data-modal]').on('click tap', function(target,callback) {
-// 	var modalTarget = $(this).data("modal");
-//
-// 	callOverlay();
-//
-// });
 $(document).on('click tap', '.js-modal-close, .js-overlay', function(){
 	destroyOverlay();
 });
