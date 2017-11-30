@@ -1475,6 +1475,7 @@ img {
   flex-flow: row nowrap;
   justify-content: space-between;
   border-top-left-radius: 80px;
+  display: flex !important;
 }
 @media (max-width: 980px) {
   .request .request-item {
