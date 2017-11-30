@@ -28,20 +28,8 @@ function expandExperience(event){
 	var container = $('.js-request');
 	var $el = $(event.currentTarget);
 
-	//console.log(container.children(":first").hasClass("is-open"));
-	// if(container.find('.exp-item').hasClass("is-open")){
-	// 	$el.removeAttr('style').addClass('is-open');
-	// 	container.removeAttr('style').animate({
-	// 		'opacity': '0'
-	// 	}, function(){
-	// 		container.hide();
-	// 	});
-	// 	console.log("a");
-	// 	return;
-	// }
-
 	callOverlay();
-	container.removeAttr('style').empty();
+	container.attr('aria-hidden','false').removeAttr('style').empty();
 
 	var getWitdh = $el.css('width');
 	var getTop = $el.offset().top - $(document).scrollTop();
@@ -61,11 +49,12 @@ function expandExperience(event){
 		'position': 'fixed',
 	},500);
 
-	//$el.css({'opacity': '0'});
-	container.find('.exp-item').children().animate({ 'opacity':'0'}, function(){ container.find('.exp-item').empty(); });
+	container.find('.exp-item').children().animate({
+		 'opacity':'0'
+	 }, function(){
+		 container.find('.exp-item').empty().append($('.js-request-individuals').show().get(0).outerHTML);
+	 });
 }
-
-//function closeExperience(){}
 
 $(document).ready(function() {
 	introScrollEffect();

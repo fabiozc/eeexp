@@ -1,3 +1,48 @@
 .request{ .scale(1.05); overflow: visible !important; .container;
+    @chatPointer: 12px;
     @media (max-width: @mobile){ min-width: 100vw; transform: translateX(-15vw) translateY(-3vh);}
+    .request-item{ .flex(row, nowrap); .border-radius-TL(80px);
+        @media (max-width: @mobile){ display: block; overflow: hidden; overflow-y: scroll;}
+    }
+    .request-info{ flex: 1 0 400px; padding: @padding; text-align: left;
+        @media (max-width: @mobile){ position: fixed;}
+    }
+    .request-title{ .sansLight; font-size: @titleFont; line-height: 1.4; margin: 0 0 @margin;
+        &:before{ .border-radius(5px); box-shadow: 0 0px 0px 0px rgba(0,0,0,0); color: @white; display: block; font-size: 3rem; margin: @margin auto; padding-top: @padding*0.75; .square(120px); text-align: center;}
+        @media (max-width: @mobile){ font-size: @regularFont; margin: @margin/5 0 @margin/4;
+            &:before{ float: left; font-size: 2rem; margin: -@margin/4 @margin/2 0 0; padding-top: @padding/3; .square(60px);}
+        }
+    }
+    .request-type{ .bold; font-size: @titleFont; text-transform: uppercase;}
+    .request-desc{ font-size: @smallFont;}
+    .request-form{ background-color: @white; .border-radius-BR(80px); flex: 1 1 auto; .flex(column,nowrap); overflow: hidden; margin-right: -20px;
+        @media (max-width: @mobile){  z-index: 10; position: relative; margin-top: 50vh; margin-right: 0;}
+    }
+    .request-chat{ flex: 1 1 100%; line-height: 1.5; overflow-y: scroll; padding: @padding;
+        @media (max-width: @mobile){ padding: @padding/2;}
+    }
+    .request-form-title{ .text-title; padding-bottom: @padding/2;}
+    .request-label{ background-color: fade(@black, 15%); .border-radius(2px); display: inline-block; .bold; margin-bottom: 1px; padding: 0 @padding/8; }
+    .request-msg{ position: relative; .border-radius(5px); box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.2); display: inline-block; margin-bottom: @margin/4; padding: @padding/4 @padding/2; text-align: left;
+        &:after{ position: absolute; bottom: @margin/2; content: ""; display: block; .rotate(45deg); .square(@chatPointer);}
+    }
+    .request-user{ background-color: @ndColor; color: @white; margin-left: @margin;
+        &:after{ background-color: @ndColor; .border-radius-B(30px); right: -@chatPointer/2;}
+    }
+    .request-server{ background-color: @grayLighter; font-size: @smallFont; margin-right: @margin;
+        &:after{ background-color: @grayLighter; .border-radius-R(30px); left: -@chatPointer/2;}
+    }
+    .request-button{ .btn-primary; margin: @margin/2 0;}
+
+    .request-item{
+        &.request-individuals{
+			.request-title:before{ #gradient .diagonal( 45deg, @aqua, @aqua2); .icon-user2;}
+		}
+		&.request-education{
+			.request-title:before{ #gradient .diagonal( 45deg, @yellow, @yellow2); .icon-social;}
+		}
+		&.request-corporates{
+			.request-title:before{ #gradient .diagonal( 45deg, @blue, @blue2); .icon-team;}
+		}
+    }
 }
