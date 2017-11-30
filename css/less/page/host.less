@@ -1,0 +1,11 @@
+.host{ margin: @margin*3 0 @margin;
+    .section-title{ position: relative; margin: 0 0 @margin*2; font-size: @largerFont; padding: @padding 0;
+        @media (min-width: @mobile){ float: left; margin-right: @margin*2; padding-right: @padding*2; text-align: right; width: 252px;
+            &:after{ position: absolute; top: 0; right: 0; margin: @margin/8 auto @margin/4; width: 3px; height: @space*6;}
+        }
+    }
+    .host-img{ .border-radius-TL(80px); .border-radius-BR(80px); border: 3px solid @white; box-shadow: 0 20px 30px -20px rgba(0,0,0,.5); float: right; display: inline-block; margin-left: @margin*2;
+        @media (max-width: @mobile){ display: block; float: none; margin: 0 auto @margin;}
+    }
+    .host-text{ padding: @padding 0;}
+}

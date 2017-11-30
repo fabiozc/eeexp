@@ -2,7 +2,7 @@
     @chatPointer: 12px;
     @media (max-width: @mobile){ min-width: 100vw; transform: translateX(-15vw) translateY(-3vh);}
     .request-item{ .flex(row, nowrap); .border-radius-TL(80px); display: flex !important;
-        @media (max-width: @mobile){ display: block; overflow: hidden; overflow-y: scroll;}
+        @media (max-width: @mobile){ display: block !important; overflow: hidden; overflow-y: scroll;}
     }
     .request-info{ flex: 1 0 400px; padding: @padding; text-align: left;
         @media (max-width: @mobile){ position: fixed;}
