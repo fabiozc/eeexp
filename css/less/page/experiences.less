@@ -41,7 +41,7 @@
 
 		&:hover,
 		&.is-open{ z-index: 1; box-shadow: 0 30px 85px rgba(0,0,0,.25); color: @black;
-			&:before{ -webkit-filter: hue-rotate(60deg) saturate(1.5); opacity: .3}
+			&:before{ -webkit-filter: hue-rotate(60deg) saturate(1.5); opacity: .3;}
 			&:after{ #gradient .diagonal(45deg,@white,fade(@green,20%));}
 			.exp-title,
 			.exp-desc,
@@ -52,10 +52,12 @@
 			}
 		}
 
-		&.is-open{ cursor: default; margin-bottom: 0;
+		&.is-open{ cursor: default; margin-bottom: 0; height: 80vh;
+			&:before{ filter: none; -webkit-filter: none;}
 			.exp-title{ }
 			.exp-desc{ justify-content: flex-start;}
 			.exp-btn{ align-self: center; padding: 0 @padding;}
+			@media (max-width: @mobile){ height: 88vh;}
 		}
 	}
 }

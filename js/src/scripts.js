@@ -56,12 +56,12 @@ function expandExperience(event){
 		'width': getWitdh
 	}).animate({
 		'top' : '10vh',
-		'left' : '10vw',
-		'width': '80vw',
+		'left' : '15vw',
+		'width': '70vw',
 		'position': 'fixed',
 	},500);
 
-	$el.css({'opacity': '0'});
+	//$el.css({'opacity': '0'});
 	container.find('.exp-item').children().animate({ 'opacity':'0'}, function(){ container.find('.exp-item').empty(); });
 }
 
@@ -88,6 +88,12 @@ $(document).ready(function() {
 $('a[href="#"]').click( function(e) {
 	e.preventDefault();
 });
+// $('a[data-modal]').on('click tap', function(target,callback) {
+// 	var modalTarget = $(this).data("modal");
+//
+// 	callOverlay();
+//
+// });
 $(document).on('click tap', '.js-modal-close, .js-overlay', function(){
 	destroyOverlay();
 });
