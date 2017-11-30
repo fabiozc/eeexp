@@ -45,8 +45,8 @@ function expandExperience(event){
 		'width': getWitdh
 	}).animate({
 		'top' : '10vh',
-		'left' : '15vw',
-		'width': '70vw',
+		'left' : '13vw',
+		'width': '74vw',
 		'position': 'fixed',
 	},300);
 
