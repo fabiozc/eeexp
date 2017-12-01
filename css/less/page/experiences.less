@@ -54,7 +54,9 @@
 
 		&.is-open{ cursor: default; margin-bottom: 0; height: 80vh; min-height: 560px;
 			& > *{ cursor: default;}
-			&:before{ filter: none; -webkit-filter: none;}
+			&:before{ filter: none; -webkit-filter: none; opacity: .2;
+				@media (max-width: @mobile){ opacity: .1;}
+			}
 			.exp-title{ }
 			.exp-desc{ justify-content: flex-start;}
 			.exp-btn{ align-self: center; padding: 0 @padding;}
