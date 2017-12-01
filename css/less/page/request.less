@@ -7,7 +7,7 @@
     .request-info{ flex: 1 0 400px; padding: @padding; text-align: left;
         @media (max-width: @mobile){ position: fixed;}
     }
-    .request-title{ .sansLight; font-size: @titleFont; line-height: 1.4; margin: 0 0 @margin;
+    .request-title{ .sansLight; font-size: @titleFont; line-height: 1.4; margin: 0 0 @margin/2;
         &:before{ .border-radius(5px); box-shadow: 0 0px 0px 0px rgba(0,0,0,0); color: @white; display: block; font-size: 3rem; margin: @margin auto; padding-top: @padding*0.75; .square(120px); text-align: center;}
         @media (max-width: @mobile){ font-size: @regularFont; margin: @margin/5 0 @margin/4;
             &:before{ float: left; font-size: 2rem; margin: -@margin/4 @margin/2 0 0; padding-top: @padding/3; .square(60px);}
