@@ -177,10 +177,14 @@
 		</div>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109742532-1"></script>
 		<script>
-			if(!window.location.href.indexOf("home") > -1){
+			if(window.location.toString().indexOf(".local") === -1){
 				(function(h,o,t,j,a,r){
 				    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-				    h._hjSettings={hjid:702716,hjsv:6};
+				    if(!window.location.href.indexOf("qa.") > -1){
+						h._hjSettings={hjid:702716,hjsv:6};
+					} else {
+						h._hjSettings={hjid:692161,hjsv:6};
+					}
 				    a=o.getElementsByTagName('head')[0];
 				    r=o.createElement('script');r.async=1;
 				    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
@@ -192,10 +196,11 @@
 				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
 				gtag('config', 'UA-109742532-1');
+				alert('dsas');
 			}
 		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/src/tilt.jquery.js"></script>
-		<script type="text/javascript" src="js/src/scripts.js"></script>
+		<script type="text/javascript" src="js/scripts-min.js"></script>
 	</body>
 </html>

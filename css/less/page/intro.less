@@ -1,8 +1,11 @@
 ﻿/* INTRO ------------------------------ */
-.intro{ #gradient .diagonal(45deg,@aqua,@green); color: @white; min-height: @introHeight; padding: 0; text-align: center; width: 100%;
-	&:before{ position: absolute; z-index: -1; background: url('../img/img-header.jpg') center -100px; background-size: cover; background-repeat: no-repeat; -webkit-filter: hue-rotate(60deg) saturate(1.8); content: ""; display: block; opacity: .15; width: 100%; height: 100%;}
+.intro{ color: @white; min-height: @introHeight; padding: 0; text-align: center; width: 100%;
+	&.is-loaded{ #gradient .diagonal(45deg,@aqua,@green);
+		&:before{ position: absolute; z-index: -1; background: url('../img/img-header.jpg') center -100px; background-size: cover; background-repeat: no-repeat; -webkit-filter: hue-rotate(60deg) saturate(1.8); content: ""; display: block; opacity: .15; width: 100%; height: 100%;}
+		.intro-title{ -webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.2)); filter: drop-shadow(0px 3px 10px rgba(0,0,0,.2));}
+	}
 	&:after{ content: ""; display: block}
-	.intro-title{ display: block; .sans; font-size: @heroFont; line-height: 1; margin-top: @space*4; -webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.2)); filter: drop-shadow(0px 3px 10px rgba(0,0,0,.2));
+	.intro-title{ display: block; .sans; font-size: @heroFont; line-height: 1; margin-top: @space*4;
 		@media (max-width: @mobile){ margin-top: @space*2.5;}
 	}
 	.intro-description{ display: block; .sansLight; font-size: @smallestFont; margin: 15px auto 0; padding-left: 67px; text-align: left; white-space: nowrap; width: 450px;
