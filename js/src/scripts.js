@@ -12,7 +12,12 @@ function introScrollEffect(){
 		});
 	}
 }
-
+function randomizeReviews(){
+	var $list = $('.js-review-list'),
+	$listItem = $list.children();
+	$listItem.sort(function() {return Math.random() - 0.5; });
+	$list.append($listItem);
+}
 function callOverlay(){
 	$('body').append("<div class='overlay js-overlay'><span class='modal-close js-modal-close' >&times;</span></div>").find('.js-overlay').animate({'opacity':'1'});
 }
@@ -26,7 +31,6 @@ function destroyOverlay(){
 	$(".js-request").empty();
 	$('.js-request-item').hide();
 }
-
 function expandExperience(event){
 	var container = $('.js-request');
 	var $el = $(event.currentTarget);
@@ -62,6 +66,8 @@ function expandExperience(event){
 
 $(document).ready(function() {
 	introScrollEffect();
+	randomizeReviews();
+
 	$('.js-exp-item').tilt({
 		scale: 1.05,
 		maxTilt: 9,
