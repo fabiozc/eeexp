@@ -81,6 +81,8 @@ $(document).ready(function() {
 	    var aid = $(this).attr("href");
 	    $('html,body').animate({scrollTop: $(aid).offset().top - 330},'slow');
 	});
+
+	$('.js-email').attr('href','mailto:contact@eeexp.co');
 });
 $('a[href="#"]').click( function(e) {
 	e.preventDefault();
