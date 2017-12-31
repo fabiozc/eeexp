@@ -5,8 +5,8 @@
 		.intro-title{ -webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.2)); filter: drop-shadow(0px 3px 10px rgba(0,0,0,.2));}
 	}
 	&:after{ content: ""; display: block}
-	.intro-title{ display: block; .sans; font-size: @heroFont; line-height: 1; margin-top: @space*4;
-		@media (max-width: @mobile){ margin-top: @space*2.5;}
+	.intro-title{ display: block; .sans; font-size: @heroFont; line-height: 1; margin-top: @space*3.5;
+		@media (max-width: @mobile){ margin-top: @space*1.5;}
 	}
 	.intro-description{ display: block; .sansLight; font-size: @smallestFont; margin: 15px auto 0; padding-left: 67px; text-align: left; white-space: nowrap; width: 450px;
 		@media (max-width: @mobile){ font-size: 6vmin; padding-left: 11.77%;}
@@ -15,4 +15,5 @@
 	.intro-description{
 		@media (max-width: @mobile){ .calc-width(@margin*2, 80%);}
 	}
+	.intro-book{ .btn-secondary-inverted; border-width: 2; .bold; margin-top: @vSpace/2;}
 }

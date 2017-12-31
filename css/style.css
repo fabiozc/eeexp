@@ -992,11 +992,11 @@ img {
   -webkit-font-smoothing: antialiased;
   font-size: 3.3em;
   line-height: 1;
-  margin-top: 160px;
+  margin-top: 140px;
 }
 @media (max-width: 980px) {
   .intro .intro-title {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }
 .intro .intro-description {
@@ -1028,6 +1028,38 @@ img {
     width: calc(100% -  80px);
     /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and future other browsers **/
   }
+}
+.intro .intro-book {
+  position: relative;
+  top: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Metropolis-Regular", "Open Sans", Helvetica, sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.8px;
+  line-height: 2.7;
+  margin: 0 0 -1px;
+  padding: 0 40px;
+  text-transform: uppercase;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+  border-width: 2;
+  font-family: "Metropolis-Bold", "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  margin-top: 30px;
+}
+.intro .intro-book:hover {
+  box-shadow: inset 0 0 0 2px #FFF;
+  color: #FFF;
+}
+.intro .intro-book:active {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #FFF;
 }
 /* INTRO ------------------------------ */
 .experiences .container {
