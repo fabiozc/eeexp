@@ -5,9 +5,10 @@
 		<title>Entrepreneur Endeavors - Life-changing experience</title>
 		<meta name="description" content="This experience will take you in the Startups, Innovation and Entrepreneurs world, offering great opportunities to develop your own expertise and network.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="fb:app_id" content="119055392152044" />
 		<link rel="icon" type="image/png" href="img/favicon.png" />
 		<link href="css/style.css" rel="stylesheet" />
-		<link rel="canonical" href="http://eeexp.co">
+		<link rel="canonical" href="https://eeexp.co">
 	</head>
 	<body class="home">
 		<section id="intro" class="main-section container intro js-intro">
@@ -135,6 +136,7 @@
 				<span class="partners-logo partner-booking">Booking.com</span>
 				<span class="partners-logo partner-tsh">The Student Hotel</span>
 				<span class="partners-logo partner-viator">Viator</span>
+				<span class="partners-logo partner-sound">Sound</span>
 				<!--span class="partners-logo partner-emirates">Emirates</span-->
 			</div>
 		</section>
@@ -207,5 +209,23 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/tilt.jquery-min.js"></script>
 		<script type="text/javascript" src="js/scripts-min.js"></script>
+		<script>
+		window.fbAsyncInit = function() {
+		FB.init({
+		appId      : '119055392152044',
+		xfbml      : true,
+		version    : 'v2.11'
+		});
+		FB.AppEvents.logPageView();
+		};
+
+		(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
 	</body>
 </html>

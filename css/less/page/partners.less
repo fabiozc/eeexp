@@ -1,11 +1,12 @@
 .partners{ background: @bgcolor2; margin-top: @vSpace/2; padding: @vSpace/2 0; text-align: center;
-    .partners-logo{ position: relative; background-repeat: no-repeat; background-size: contain; background-position: center; display: inline-block; filter: saturate(0%) brightness(0%); -webkit-filter: saturate(0%) brightness(0%); margin: @vSpace/4 @margin; opacity: .4; text-indent: -9999px; height: 50px;
-        @media (max-width: @mobile){ width: 300px;}
+    .partners-logo{ position: relative; background-repeat: no-repeat; background-size: contain; background-position: center; display: inline-block; filter: saturate(0%) brightness(0%); -webkit-filter: saturate(0%) brightness(0%); margin: @vSpace/4 @margin/2; opacity: .4; text-indent: -9999px; height: 50px;
+        @media (max-width: @mobile){ width: 300px; display: block; margin: @vSpace/4 auto;}
         &.partner-airbnb{ background-image: url("@{baseUrl}/img/partner-airbnb.png"); width: 362px/2;}
         &.partner-booking{ background-image: url("@{baseUrl}/img/partner-booking.png"); width: 461px/2;}
         &.partner-emirates{ background-image: url("@{baseUrl}/img/partner-emirates.png"); width: 415px/2;}
         &.partner-tsh{ top: -@vSpace/4; margin-bottom: -@vSpace/4; background-image: url("@{baseUrl}/img/partner-tsh.png"); width: 144px; height: 80px;}
-        &.partner-viator{ background-image: url("@{baseUrl}/img/partner-viator.png"); width: 248px/2;}
+        &.partner-viator{ background-image: url("@{baseUrl}/img/partner-viator.png"); width: 243px/2;}
+        &.partner-sound{ background-image: url("@{baseUrl}/img/partner-sound.png"); width: 279px/2;}
         //&:hover{ filter: saturate(100%) brightness(100%); -webkit-filter: saturate(100%) brightness(100%); opacity: 1;}
     }
 }
