@@ -70,7 +70,7 @@ $(document).ready(function() {
 
 	$('.js-exp-item').tilt({
 		scale: 1.05,
-		maxTilt: 9,
+		maxTilt: 10,
 		perspective: 2000,
 		tiltSpeed: 400
 	});
