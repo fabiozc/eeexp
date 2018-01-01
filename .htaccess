@@ -39,9 +39,13 @@ AddOutputFilterByType DEFLATE application/x-javascript
 AddType x-font/woff .woff
 AddType image/x-icon .ico
 AddType image/png .png
-AddType image/svg .svg
+AddType image/svg+xml .svg
 AddType image/jpg .jpg
 BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4\.0[678] no-gzip
 BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 Header append Vary User-Agent
+
+AddOutputFilterByType DEFLATE image/svg+xml
+
+ExpiresByType image/svg+xml "access 1 month"
