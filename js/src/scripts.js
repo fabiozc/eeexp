@@ -84,6 +84,9 @@ $(document).ready(function() {
 
 	$('.js-email').attr('href','mailto:contact@eeexp.co');
 	$('[aria-hidden="true"]').hide();
+	$('[data-src]').each( function(){
+		$(this).attr('src', $(this).data('src'));
+	});
 });
 $('a[href="#"]').click( function(e) {
 	e.preventDefault();
