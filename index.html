@@ -180,10 +180,10 @@
 				<div class="request-chat">
 					<h4 class="request-form-title">An adapted experience with your management, employees, clients or partners.</h4>
 					<div class="request-msg request-user">
-						Hi! My name is <input class="form-input form-name" type="text" name="name" placeholder="John Smith" value="" />
-						and you can reach me at <input class="form-input form-email" type="email" placeholder="name@email.com" name="email" value="" />.
+						Hi! My name is <input class="form-input form-name js-form-name js-form-item is-empty" type="text" name="name" placeholder="John Smith" value="" />
+						and you can reach me at <input class="form-input form-email js-form-item is-empty" type="email" placeholder="name@email.com" name="email" value="" />.
 						I'm looking forward to have this experience in
-						<div class="form-select form-select-city js-form-select is-empty" data-placeholder="select city" data-form="js-form-city">
+						<div class="form-select form-select-city js-form-item js-form-select is-empty" data-placeholder="select city" data-form="js-form-city">
 							<ul class="form-option-list js-option-list">
 								<li class="form-option js-form-option">Amsterdam</li>
 								<li class="form-option js-form-option">Dubai</li>
@@ -192,7 +192,7 @@
 							</ul>
 						</div>
 						with more
-						<div class="form-select form-select-group js-form-select is-empty" data-placeholder="0" data-form="js-form-group">
+						<div class="form-select form-select-group js-form-item js-form-select is-empty" data-placeholder="0" data-form="js-form-group">
 							<ul class="form-option-list js-option-list">
 								<li class="form-option js-form-option">0</li>
 								<li class="form-option js-form-option">1</li>
@@ -203,13 +203,15 @@
 							</ul>
 						</div> friend(s).
 					</div>
-					<p class="request-msg request-server">Good <span class="form-server-time">morning</span> <span class="form-server-name">Name</span>!<br /> Ok! Could you please tell me your details in order to review your profile? Also feel free to send me what you expect to see or discuss.</p>
-					<div class="request-msg request-user request-textarea"><textarea class="form-textarea form-message" name="message" id="message"></textarea></div>
+					<p class="request-msg request-server request-chat-message js-chat-message-1">Ok, <span class="js-form-server-name">Name</span>! Could you please tell me your details in order to review your profile? Also feel free to send me what you expect to see or discuss.</p>
+					<div class="request-msg request-user request-textarea  request-chat-message js-chat-message-2">
+						<textarea class="form-textarea form-message js-form-message" name="message" id="message" placeholder="Tell the details..."></textarea>
+					</div>
 					<input class="form-input form-type" type="hidden" name="Type" value="Corporates" />
 					<input class="form-input form-city js-form-city" type="hidden" name="City" value="" />
 					<input class="form-input form-group js-form-group" type="hidden" name="Group" value="0" />
 					<div class="form-action">
-						<a class="request-button js-request-button" href="#">Send request</a>
+						<a class="request-button js-request-button is-disabled" href="#">Send request</a>
 					</div>
 				</div>
 				<div class="request-feedback">
