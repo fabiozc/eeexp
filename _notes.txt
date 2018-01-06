@@ -1,0 +1,15 @@
+TODO
+
+- Form
+- Form submit to spreadsheets
+- Reference to icons
+- Social links
+- Test Analytics
+- Image Performance
+- Check text-indent vs SEO
+
+
+<div class="video">
+<video loop="" muted="" autoplay="" poster="" class="fullscreen_bg">
+<source src="big_buck_bunny.mp4" type="video/mp4"></source>
+</video></div>
