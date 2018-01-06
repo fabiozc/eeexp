@@ -108,3 +108,13 @@ $('.js-pagi').on('click', function (e) {
 	}
 	$('.is-current').addClass("is-prev").removeClass('is-current').next().removeClass("is-prev").addClass('is-current');
 });
+$('.js-request').on('click tap','.js-form-select',function(){
+	$(this).find('.js-option-list:hidden').slideDown(200);
+});
+$('.js-request').on('click tap','.js-form-option',function(){
+	var option = $(this).text();
+	$(this).parents('.js-form-select').attr('data-placeholder',option).removeClass('is-empty');
+	$('.' + $(this).parents('.js-form-select').attr('data-form')).val(option);
+	$(this).parents('.js-option-list').slideUp(200);
+});
+//$('.js-request-button').on('click',function(){});
