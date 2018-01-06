@@ -19,7 +19,7 @@
         @media (max-width: @mobile){ background-color: transparent; margin-top: 0; margin-right: 0;}
         @media (max-width: @small-mobile){ margin-top: 0;}
     }
-    .request-chat{ .border-radius-BR(80px); overflow: hidden; flex: 1 1 100%; line-height: 1.5; height: 100%; padding: @padding;
+    .request-window{ .border-radius-BR(80px); overflow: hidden; flex: 1 1 100%; line-height: 1.5; height: 100%; padding: @padding;
         @media (max-width: @mobile){ padding: @padding/2;}
     }
     .request-form-title{ .text-title; font-size: @regularFont; margin: 0 -@margin/2 0; padding-bottom: @padding/2;
@@ -76,7 +76,10 @@
     .request-textarea{ padding: 7px 7px 4px;}
     .form-textarea{ .sans; line-height: 1.3; width: 100%; height: 100px;}
 
-    .request-feedback{ display: none;}
+    .request-feedback{ display: none;
+        .request-form-title{ .section-title; font-size: @largeFont;}
+    }
+    .request-close{ .btn-primary; margin: @vSpace auto;}
     .request-item{
         &.request-individuals{
 			.request-title:before{ #gradient .diagonal( 45deg, @aqua, @aqua2); .icon-user2;}

@@ -114,7 +114,9 @@ function checkIfFormIsFilled(el){
 	var parentForm = el.parents('.js-request-form');
 	if(parentForm.find('.js-form-item:not(.is-empty)').length === parentForm.find(".js-form-item").length){
 		var name = $('.js-form-name').val().split(' ')[ 0 ];
+		var email = $('.js-form-email').val();
 		parentForm.find('.js-form-server-name').text(name);
+		parentForm.find('.js-form-server-email').text(email);
 		parentForm.find('.js-chat-message-2').show();
 		parentForm.find('.js-chat-message-1').show();
 		parentForm.parents('.js-request-item').animate({ scrollTop: parentForm.parents('.js-request-item').height()}, 1000);
@@ -154,14 +156,18 @@ $('.js-request').on('keyup','.js-form-message',function(){
 	}
 });
 $('.js-request').on('click tap','.js-request-button',function(){
+	var chatParent = $(this).parents('.js-request-form');
 	if($(this).hasClass('is-disabled')){
-		var firstEmpty = $(this).parents('.js-request-form').find('.is-empty').first();
+		var firstEmpty = chatParent.find('.is-empty').first();
 		if(firstEmpty.is('input')){
 			firstEmpty.focus();
 		} else {
 			firstEmpty.trigger('click');
 		}
 	} else {
+		chatParent.find('.js-request-chat').fadeOut(function(){
+			chatParent.find('.js-request-feedback').fadeIn();
+		});
 
 	}
 });
