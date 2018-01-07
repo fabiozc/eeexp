@@ -190,6 +190,7 @@ $('.js-request').on('submit','.js-request-form',function(e){
 });
 $('.js-booknow').on('click tap',function () {
 	var container = $('.js-request');
+	container.attr('aria-hidden','false').removeAttr('style').empty();
 	container.append($('.js-request-item[data-item="All"]'));
 	callOverlay();
 	container.attr('aria-hidden','false').removeAttr('style').show().addClass("modal").animate({
