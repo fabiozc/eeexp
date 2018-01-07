@@ -155,8 +155,8 @@ $('.js-request').on('keyup','.js-form-message',function(){
 		$(this).parents('.js-request-form').find('.js-request-button').removeClass('is-disabled');
 	}
 });
-$('.js-request').on('click tap','.js-request-button',function(){
-	var chatParent = $(this).parents('.js-request-form');
+$('.js-request').on('submit','.js-request-form',function(e){
+	var chatParent = $(this);
 	if($(this).hasClass('is-disabled')){
 		var firstEmpty = chatParent.find('.is-empty').first();
 		if(firstEmpty.is('input')){
@@ -165,9 +165,26 @@ $('.js-request').on('click tap','.js-request-button',function(){
 			firstEmpty.trigger('click');
 		}
 	} else {
-		chatParent.find('.js-request-chat').fadeOut(function(){
-			chatParent.find('.js-request-feedback').fadeIn();
+		e.preventDefault();
+		$('.js-request-button').addClass('is-loading');
+		$.ajax({
+			type     : "POST",
+			//dataType: 'jsonp',
+			cache    : false,
+			url      : $(this).attr('action'),
+			data     : $(this).serialize(),
+			statusCode: {
+				0: function() {
+					chatParent.find('.js-request-chat').fadeOut(function(){
+						chatParent.find('.js-request-feedback').fadeIn();
+					});
+				},
+				200: function() {
+					chatParent.find('.js-request-chat').fadeOut(function(){
+						chatParent.find('.js-request-feedback').fadeIn();
+					});
+				}
+			}
 		});
-
 	}
 });

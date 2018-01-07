@@ -45,6 +45,7 @@
     .form-action{ display: block; text-align: center;}
     .request-button{ .btn-primary; margin: @margin/2 0;
         &.is-disabled{ .btn-primary .is-disabled;}
+        &.is-loading{ .btn-primary .is-loading;}
     }
 
     .form-input,
@@ -56,9 +57,9 @@
         &::placeholder{ color: rgba(255,255,255,.5);}
         @media (max-width: @mobile){ font-size: 16px;}
     }
-    .form-input{ max-width: 150px;
+    .form-input{ max-width: 130px;
         @media (max-width: @mobile){ max-width: 120px;}
-        &.form-email{ max-width: 120px;}
+        //&.form-email{ max-width: 120px;}
     }
     .form-select{ position: relative; cursor: pointer; padding-right: @padding/1.5;
         &.form-select-city{ min-width: 100px;}
