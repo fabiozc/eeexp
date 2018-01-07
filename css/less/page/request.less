@@ -21,6 +21,7 @@
     }
     .request-window{ .border-radius-BR(80px); overflow: hidden; flex: 1 1 100%; line-height: 1.5; height: 100%; padding: @padding;
         @media (max-width: @mobile){ padding: @padding/2;}
+        @media (max-width: @small-mobile){ padding: @padding/4;}
     }
     .request-form-title{ .text-title; font-size: @regularFont; margin: 0 -@margin/2 0; padding-bottom: @padding/2;
         @media (max-width: @mobile){ font-size: @regularFont; margin: 0;}
@@ -35,6 +36,7 @@
         &:after{ position: absolute; bottom: @margin/2; content: ""; display: block; .rotate(45deg); .square(@chatPointer);}
     }
     .request-user{ background-color: @ndColor; color: @white; margin-left: @margin/2;
+
         &:after{ background-color: @ndColor; .border-radius-B(30px); right: -@chatPointer/2;}
     }
     .request-server{ display: none; background-color: @grayLighter; font-size: @smallFont; margin-right: @margin/2;
@@ -77,8 +79,9 @@
     .request-textarea{ padding: 7px 7px 4px;}
     .form-textarea{ .sans; line-height: 1.3; width: 100%; height: 100px;}
 
-    .request-feedback{ display: none;
-        .request-form-title{ .section-title; font-size: @largeFont;}
+    .request-feedback{ display: none; text-align: center;
+        .request-form-title{ .section-title; font-size: @largeFont; margin-top: @vSpace*2;}
+        p{ text-align: left;}
     }
     .request-close{ .btn-primary; margin: @vSpace auto;}
     .request-item{
@@ -91,5 +94,12 @@
 		&.request-corporates{
 			.request-title:before{ #gradient .diagonal( 45deg, @blue, @blue2); .icon-team;}
 		}
+    }
+    .request-all{ background-color: @white; min-height: 400px; height: 80vh;
+        .request-form-title{ text-align: center;}
+        .request-info{ #gradient .diagonal; .border-radius-TL(80px); color: @white; padding-top: @vSpace*2;
+            @media (max-width: @mobile){ padding: @vSpace*1.5 @padding/2 @vSpace;}
+        }
+        .request-desc{ font-size: @regularFont;}
     }
 }

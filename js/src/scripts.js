@@ -188,3 +188,14 @@ $('.js-request').on('submit','.js-request-form',function(e){
 		});
 	}
 });
+$('.js-booknow').on('click tap',function () {
+	var container = $('.js-request');
+	container.append($('.js-request-item[data-item="All"]'));
+	callOverlay();
+	container.attr('aria-hidden','false').removeAttr('style').show().addClass("modal").animate({
+		'top' : '7vh',
+		'left' : '10vw',
+		'width': '80vw',
+		'position': 'fixed',
+	},300);
+});

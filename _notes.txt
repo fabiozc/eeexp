@@ -1,11 +1,7 @@
 TODO
-
-- Form
-- Form submit to spreadsheets
 - Reference to icons
 - Social links
 - Test Analytics
-- Image Performance
 - Check text-indent vs SEO
 
 
