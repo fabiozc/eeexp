@@ -51,9 +51,9 @@ function expandExperience(event){
 		'left' : getLeft,
 		'width': getWitdh
 	}).animate({
-		'top' : '10vh',
-		'left' : '13vw',
-		'width': '74vw',
+		'top' : '7vh',
+		'left' : '10vw',
+		'width': '80vw',
 		'position': 'fixed',
 	},300);
 
@@ -107,4 +107,84 @@ $('.js-pagi').on('click', function (e) {
 		return;
 	}
 	$('.is-current').addClass("is-prev").removeClass('is-current').next().removeClass("is-prev").addClass('is-current');
+});
+
+//FORM CHAT
+function checkIfFormIsFilled(el){
+	var parentForm = el.parents('.js-request-form');
+	if(parentForm.find('.js-form-item:not(.is-empty)').length === parentForm.find(".js-form-item").length){
+		var name = $('.js-form-name').val().split(' ')[ 0 ];
+		var email = $('.js-form-email').val();
+		parentForm.find('.js-form-server-name').text(name);
+		parentForm.find('.js-form-server-email').text(email);
+		parentForm.find('.js-chat-message-2').show();
+		parentForm.find('.js-chat-message-1').show();
+		parentForm.parents('.js-request-item').animate({ scrollTop: parentForm.parents('.js-request-item').height()}, 1000);
+		parentForm.find('.js-chat-message-1').delay(400).animate({
+			'opacity': '1'
+		}, function(){
+			parentForm.find('.js-chat-message-2').delay(800).animate({
+				'opacity': '1'
+			}).find('.js-form-message').focus();
+		});
+	}
+}
+$('.js-request').on('click tap','.js-form-select',function(){
+	$(this).find('.js-option-list:hidden').slideDown(200);
+});
+$('.js-request').on('click tap','.js-form-option',function(){
+	var option = $(this).text();
+	$(this).parents('.js-form-select').attr('data-placeholder',option).removeClass('is-empty');
+	$('.' + $(this).parents('.js-form-select').attr('data-form')).val(option);
+	$(this).parents('.js-option-list').slideUp(200).removeClass('is-empty');
+	checkIfFormIsFilled($(this));
+});
+
+$('.js-request').on('keyup','.js-form-item',function(){
+	if($(this).val() === ""){
+		$(this).addClass('is-empty');
+	} else{
+		$(this).removeClass('is-empty');
+	}
+	checkIfFormIsFilled($(this));
+});
+$('.js-request').on('keyup','.js-form-message',function(){
+	if($(this).val() === ""){
+		$(this).parents('.js-request-form').find('.js-request-button').addClass('is-disabled');
+	} else{
+		$(this).parents('.js-request-form').find('.js-request-button').removeClass('is-disabled');
+	}
+});
+$('.js-request').on('submit','.js-request-form',function(e){
+	var chatParent = $(this);
+	if($(this).hasClass('is-disabled')){
+		var firstEmpty = chatParent.find('.is-empty').first();
+		if(firstEmpty.is('input')){
+			firstEmpty.focus();
+		} else {
+			firstEmpty.trigger('click');
+		}
+	} else {
+		e.preventDefault();
+		$('.js-request-button').addClass('is-loading');
+		$.ajax({
+			type     : "POST",
+			//dataType: 'jsonp',
+			cache    : false,
+			url      : $(this).attr('action'),
+			data     : $(this).serialize(),
+			statusCode: {
+				0: function() {
+					chatParent.find('.js-request-chat').fadeOut(function(){
+						chatParent.find('.js-request-feedback').fadeIn();
+					});
+				},
+				200: function() {
+					chatParent.find('.js-request-chat').fadeOut(function(){
+						chatParent.find('.js-request-feedback').fadeIn();
+					});
+				}
+			}
+		});
+	}
 });
