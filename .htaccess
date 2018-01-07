@@ -1,3 +1,11 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
 <Files ~ "^.*\.([Hh][Tt][Aa])">
  order allow,deny
  deny from all
@@ -8,17 +16,17 @@
 # Turn on Expires and set default expires to 3 days
 ExpiresActive On
 ExpiresDefault A259200
- 
+
 <filesMatch ".(ico|gif|jpg|jpeg|png|flv|pdf|swf|mov|mp3|wmv|ppt|svg)$">
 ExpiresDefault A2419200
 Header append Cache-Control "public"
 </filesMatch>
- 
+
 <filesMatch ".(xml|txt|html|js|css)$">
 ExpiresDefault A604800
 Header append Cache-Control "private, must-revalidate"
 </filesMatch>
- 
+
 # Force no caching for dynamic files
 <filesMatch ".(php|cgi|pl|htm)$">
 ExpiresDefault A0
