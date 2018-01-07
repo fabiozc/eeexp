@@ -84,8 +84,15 @@ $(document).ready(function() {
 
 	$('.js-email').attr('href','mailto:contact@eeexp.co');
 	$('[aria-hidden="true"]').hide();
-	$('[data-src]').each( function(){
-		$(this).attr('src', $(this).data('src'));
+
+	var targetOffset = $("#experiences").offset().top;
+	var $w = $(window).scroll(function(){
+	    if ( $w.scrollTop() > targetOffset ) {
+			$('[data-src]').each( function(){
+				$(this).attr('src', $(this).data('src'));
+			});
+			$(window).off("scroll");
+	    }
 	});
 });
 $('a[href="#"]').click( function(e) {
