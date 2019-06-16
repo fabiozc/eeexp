@@ -102,4 +102,11 @@
         }
         .request-desc{ font-size: @regularFont;}
     }
+    .request-list{ margin: @vSpace @space;
+        @media (max-width: @mobile){ margin: @vSpace/4 @space/4 @vSpace;}
+    }
+    .request-cities{ display: inline-block; margin: @vSpace/4 @space/2;
+        @media (max-width: @mobile){ margin: @vSpace/8 @space/4;}
+        &-link{ .btn-primary; .bold;}
+    }
 }
