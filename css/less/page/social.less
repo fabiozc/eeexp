@@ -1,0 +1,16 @@
+#social{ #gradient .diagonal; color: @white; margin-top: @margin*2; padding: @padding 0; text-align: center;
+    @media (max-width: @mobile){ margin-top: @margin; padding: @padding/4;}
+    .container{ margin: 0 auto;}
+    .section-title{ position: relative; font-size: @largerFont; padding: @padding/2 0;
+        @media (min-width: @mobile){ float: left; margin: 0 @margin*2 0 0; padding-right: @padding*2; text-align: right;
+            &:after{ position: absolute; top: -3px; bottom: 0; right: 0; background: none; width: 3px; height: 100%;}
+        }
+    }
+    .social-text{ .text-title; padding: @padding/8 0 @padding/4;
+        @media (max-width: @mobile){ font-size: @smallFont;}
+    }
+    .social-link{ .btn-tertiary-inverted; .bold; display: inline-block; margin: 0 @space 0 0;
+        @media (max-width: @mobile){ display: inline-block; margin: 0 0 @vSpace/8; width: 100%;}
+        &:last-child{ margin-right: 0;}
+    }
+}
