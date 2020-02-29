@@ -885,7 +885,7 @@ img {
   #whatsapp-cta {
     position: fixed;
     bottom: 14px;
-    right: 14px;
+    left: 14px;
     z-index: 10;
     background-color: #26d365;
     border: 2px solid white;
